@@ -118,3 +118,4 @@
   <rect x="180" y="460" width="540" height="36" rx="6" fill="#101726" stroke="#27354f"/>
   <text x="450" y="483" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Ergonomic Design Rationale: Combat triggers mapped to Index/Middle fingers; Movement &amp; Camera decouple thumb navigation.</text>
 </svg>
+

@@ -72,3 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('🎮 BACS3233 Game Design Portfolio Initialized: Dash Quack Studio');
 });
+
