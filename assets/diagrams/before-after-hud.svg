@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="splitBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#141d2f" />
+    </linearGradient>
+  </defs>
+
+  <rect width="920" height="400" rx="14" fill="url(#splitBg)" stroke="#27354f" stroke-width="2"/>
+
+  <!-- Left Side: Week 2 Initial Prototype (Cluttered / Obtrusive) -->
+  <g transform="translate(30, 30)">
+    <rect width="415" height="340" rx="10" fill="#131b2c" stroke="#f43f5e" stroke-width="2"/>
+    <rect x="15" y="15" width="150" height="26" rx="4" fill="rgba(244, 63, 94, 0.2)" stroke="#f43f5e"/>
+    <text x="90" y="32" text-anchor="middle" fill="#fda4af" font-family="'Outfit', sans-serif" font-size="12" font-weight="700">WEEK 2 INITIAL DESIGN</text>
+
+    <!-- Heavy Borders & Big Clunky Elements -->
+    <rect x="25" y="60" width="220" height="45" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <text x="135" y="85" text-anchor="middle" fill="#f87171" font-size="11">Heavy Opaque Health Box (Blocked Vision)</text>
+
+    <circle cx="360" cy="85" r="32" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="360" y="88" text-anchor="middle" fill="#f59e0b" font-size="10">Static Mini-map</text>
+
+    <rect x="70" y="140" width="275" height="110" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="207" y="175" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="bold">Obtrusive Centered Quest Popups</text>
+    <text x="207" y="200" text-anchor="middle" fill="#94a3b8" font-size="10">Screen visual noise during active silat combat</text>
+    <text x="207" y="225" text-anchor="middle" fill="#94a3b8" font-size="10">Parry window 0.10s (High player frustration)</text>
+
+    <rect x="15" y="295" width="385" height="30" rx="4" fill="#2d1520"/>
+    <text x="207" y="315" text-anchor="middle" fill="#fda4af" font-size="10">Review Critique: Obstructs 3D spatial awareness; excessive cognitive load.</text>
+  </g>
+
+  <!-- Right Side: Week 4 Refined Final Design (Minimalist / Contextual) -->
+  <g transform="translate(475, 30)">
+    <rect width="415" height="340" rx="10" fill="#131b2c" stroke="#10b981" stroke-width="2"/>
+    <rect x="15" y="15" width="160" height="26" rx="4" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981"/>
+    <text x="95" y="32" text-anchor="middle" fill="#6ee7b7" font-family="'Outfit', sans-serif" font-size="12" font-weight="700">WEEK 4 REFINED DESIGN</text>
+
+    <!-- Sleek Minimalist & Contextual Elements -->
+    <rect x="25" y="60" width="160" height="20" rx="10" fill="rgba(30, 41, 59, 0.7)" stroke="#10b981" stroke-width="1.5"/>
+    <text x="105" y="74" text-anchor="middle" fill="#6ee7b7" font-size="10">Diegetic Lotus Arc (Fades out of combat)</text>
+
+    <!-- Dynamic Compass Bar replacing bulky minimap -->
+    <rect x="210" y="60" width="180" height="20" rx="10" fill="rgba(30, 41, 59, 0.7)" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="300" y="74" text-anchor="middle" fill="#22d3ee" font-size="10">Floating Compass Bar (90% clearer)</text>
+
+    <rect x="70" y="140" width="275" height="110" rx="6" fill="#062e24" stroke="#10b981" stroke-width="1.5"/>
+    <text x="207" y="175" text-anchor="middle" fill="#34d399" font-size="12" font-weight="bold">Contextual Audio &amp; Edge Vignette</text>
+    <text x="207" y="200" text-anchor="middle" fill="#94a3b8" font-size="10">Subtle perimeter glow replaces center alerts</text>
+    <text x="207" y="225" text-anchor="middle" fill="#6ee7b7" font-size="10">Parry window tuned to 0.18s + audio chime cue</text>
+
+    <rect x="15" y="295" width="385" height="30" rx="4" fill="#0d281f"/>
+    <text x="207" y="315" text-anchor="middle" fill="#6ee7b7" font-size="10">Result: 4.8/5 Playtester Satisfaction; Seamless immersion.</text>
+  </g>
+</svg>

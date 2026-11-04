@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3: Designing the Gameplay | The Making of Hikayat</title>
+  <meta name="description" content="Week 3 Game Design documentation: Spatial design metrics, top-down level map, Csikszentmihalyi flow pacing curves, combat tuning tables, and 3D asset budget planning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Academic Rubric Banner -->
+  <aside class="academic-banner" aria-label="Course Academic Information">
+    <div class="academic-banner-inner">
+      <div>
+        <strong>TAR UMT</strong> • Faculty of Computing and Information Technology • <strong>BACS3233 Computer Game Design</strong>
+      </div>
+      <div class="academic-pills">
+        <span class="academic-pill">Practical: <strong>003 (Week 3)</strong></span>
+        <span class="academic-pill">Focus: <strong>Level Design, Flow &amp; Tuning</strong></span>
+        <span class="academic-pill">Outcome: <strong>CLO2 Flow Design &amp; Tuning (P4, PLO3)</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo-icon">🗡️</div>
+        <div class="brand-text">
+          <span class="brand-title">THE MAKING OF HIKAYAT</span>
+          <span class="brand-subtitle">Studio Dash Quack • Portfolio</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Overview</a></li>
+          <li class="nav-item"><a href="week1.html" class="nav-link">Week 1 <span class="nav-badge-pill">Birth</span></a></li>
+          <li class="nav-item"><a href="week2.html" class="nav-link">Week 2 <span class="nav-badge-pill">Mechanics</span></a></li>
+          <li class="nav-item"><a href="week3.html" class="nav-link active">Week 3 <span class="nav-badge-pill">Gameplay</span></a></li>
+          <li class="nav-item"><a href="week4.html" class="nav-link">Week 4 <span class="nav-badge-pill">Refinement</span></a></li>
+          <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="evidence.html" class="nav-link">Evidence Log</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-inner">
+        <span class="page-week-indicator">Week 3 • Practical 003 Focus</span>
+        <h1 class="page-title">Designing the Gameplay</h1>
+        <p class="page-description">
+          Synthesizing our mechanics into an immersive 3D spatial experience: architectural level layout, player navigation sightlines, Csikszentmihalyi flow pacing curves, mathematical combat balancing tables, and 3D asset resource planning.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Week 3 Focus Callout -->
+      <div class="callout callout-info">
+        <h4>🎯 Practical 003 Core Curriculum Focus</h4>
+        <p>
+          This documentation applies the principles of <strong>Spatial Design</strong>, <strong>Game Flow Theory</strong>, <strong>Level Blueprinting</strong>, and <strong>Game Balancing / Tuning</strong>, fulfilling the primary performance indicators of Course Learning Outcome 2 (CLO2).
+        </p>
+      </div>
+
+      <!-- Section 3.1: Spatial Design Principles & Metrics -->
+      <section class="card" id="spatial-design">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">📐</div>
+            <h2 class="card-title">3.1 Spatial Design Metrics &amp; Navigation Psychology</h2>
+          </div>
+          <span class="academic-pill">3D Architectural Framework</span>
+        </div>
+
+        <p class="lead">
+          Level design in 3D action games begins with establishing standard character physical metrics. These metrics determine the scale of the geometry, ensuring running, leaping, and climbing feel responsive and physically grounded.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3>Standard 3D Metric Specifications</h3>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Physical Metric Parameter</th>
+                    <th>Standard Value</th>
+                    <th>Design Purpose &amp; Clearance Rule</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Player Character Height</strong></td>
+                    <td>1.75 meters</td>
+                    <td>Establishes human scale against temple architecture.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Camera Eye Height</strong></td>
+                    <td>1.60 meters</td>
+                    <td>Third-person over-shoulder pivot; provides optimal horizon sightline.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Normal Walk Speed</strong></td>
+                    <td>3.5 m/s</td>
+                    <td>Comfortable cadence for inspecting cultural props and murals.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sprint Speed</strong></td>
+                    <td>7.0 m/s</td>
+                    <td>Allows rapid traversing across cleared courtyards.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Standing Jump Height</strong></td>
+                    <td>2.2 meters</td>
+                    <td>Permits clearing low timber fences and stone debris.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Running Jump Distance</strong></td>
+                    <td>4.5 meters</td>
+                    <td>Dictates max ravine gap spacing for platforming sections.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Standard Doorway Clearance</strong></td>
+                    <td>3.0m x 2.2m</td>
+                    <td>Prevents 3D camera collision clipping during transitions.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Corridor / Choke Width</strong></td>
+                    <td>4.0 meters</td>
+                    <td>Ensures adequate combat radius for 360° blade swings.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3>Spatial Navigation Principles Applied</h3>
+            <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+              <h4 style="color: var(--accent-gold-light); margin-top: 0;">1. Weenie / Landmark Sighting</h4>
+              <p style="font-size: 0.88rem;">
+                Borrowing Walt Disney's architectural concept of the "Weenie", the towering <strong>Golden Spire of Mount Santubong</strong> is visible from almost every outdoor vantage point in the level, serving as an intuitive visual compass that anchors player orientation.
+              </p>
+            </div>
+
+            <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+              <h4 style="color: var(--accent-teal); margin-top: 0;">2. Prospect and Refuge (Jay Appleton)</h4>
+              <p style="font-size: 0.88rem;">
+                Levels alternate between narrow, covered stilt walkways (<em>Refuge</em>: safe, intimate spaces for catching breath and crafting salves) and wide open courtyards (<em>Prospect</em>: vast vistas showcasing upcoming challenges and enemy formations).
+              </p>
+            </div>
+
+            <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <h4 style="color: var(--accent-emerald); margin-top: 0;">3. Breadcrumb Guidance</h4>
+              <p style="font-size: 0.88rem;">
+                Subtle streams of glowing golden fireflies and illuminated brass incense burners naturally guide the player's eye along the critical path without requiring immersion-breaking neon mini-map arrows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3.2: Level Layout & Top-Down Blueprint -->
+      <section class="card" id="level-map">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🗺️</div>
+            <h2 class="card-title">3.2 Architectural Level Blueprint: The Sunken Ruins</h2>
+          </div>
+          <span class="academic-pill">Practical 003 Core Deliverable</span>
+        </div>
+
+        <p class="lead">
+          Below is the top-down spatial architectural map of Chapter 1: <em>The Sunken Ruins of Santubong</em>, illustrating spawn points, critical flow paths, enemy ambush arenas, puzzle barriers, and optional exploration secrets.
+        </p>
+
+        <!-- Embedded Level Map SVG -->
+        <div class="diagram-container">
+          <img src="assets/diagrams/level-map.svg" alt="The Sunken Ruins of Santubong Top-Down Blueprint" style="border-radius: 8px;">
+          <p class="diagram-caption">Figure 3.1: Top-down level blueprint of Chapter 1 with critical path, encounter arenas, and puzzle gates.</p>
+        </div>
+
+        <div class="grid-2">
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="color: var(--accent-emerald); margin-top: 0;">Zone 1 &amp; Zone 2 Breakdown</h3>
+            <h4 style="color: #ffffff;">Zone 1: Village of Permai (Spawn &amp; Tutorial)</h4>
+            <p style="font-size: 0.88rem;">
+              A tranquil stilt-house fishing hamlet sheltered beneath rainforest cliffs. Serves as the safe onboarding area where players master movement, camera controls, jumping, and basic interaction before facing hostility.
+            </p>
+            <h4 style="color: #ffffff; margin-top: 1rem;">Zone 2: The Overgrown Courtyard (First Melee Encounter)</h4>
+            <p style="font-size: 0.88rem;">
+              An ancient stone courtyard engulfed in shadow mist. Enclosed by crumbling walls, introducing three Corrupted Shadow Minions. Teaches lock-on camera mechanics, light slashes, and defensive parrying.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="color: var(--accent-gold-light); margin-top: 0;">Zone 3 &amp; Zone 4 Breakdown</h3>
+            <h4 style="color: #ffffff;">Zone 3: Wayang Hall (Light Alignment Puzzle)</h4>
+            <p style="font-size: 0.88rem;">
+              A grand ceremonial temple chamber with a massive locked stone portal. Houses the 3D rotating bronze artifact and overhead sun shaft. Acts as a mental breather pacing break after the courtyard skirmish.
+            </p>
+            <h4 style="color: #ffffff; margin-top: 1rem;">Zone 4: Sanctum of the Keris (Climactic Boss Arena)</h4>
+            <p style="font-size: 0.88rem;">
+              A dramatic circular arena perched atop the precipice overlooking Mount Santubong. The arena accommodates the fast-moving Corrupted Garuda boss fight, culminating in the solar cleansing altar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3.3: Game Flow & Pacing Curve -->
+      <section class="card" id="game-flow">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">📈</div>
+            <h2 class="card-title">3.3 Game Flow Theory &amp; Mission Pacing Curve</h2>
+          </div>
+          <span class="academic-pill">Psychological Flow Design</span>
+        </div>
+
+        <p class="lead">
+          Game pacing must avoid emotional monotony. According to Mihaly Csikszentmihalyi's <strong>Flow Theory</strong>, gameplay must balance challenge against player competence, alternating between high-intensity action peaks and relaxing cognitive valleys.
+        </p>
+
+        <!-- Embedded Pacing Curve SVG -->
+        <div class="diagram-container">
+          <img src="assets/diagrams/pacing-curve.svg" alt="Chapter 1 Gameplay Pacing and Tension Curve Graph" style="border-radius: 8px;">
+          <p class="diagram-caption">Figure 3.2: 25-minute mission tension curve illustrating cycles of exposition, tension, climax, and catharsis.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Timeline Phase</th>
+                <th>Estimated Time</th>
+                <th>Gameplay Activity</th>
+                <th>Emotional State &amp; Tension Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Exposition (Zone 1)</strong></td>
+                <td>Minutes 0:00 – 4:00</td>
+                <td>Waking in Permai; picking up dormant Keris; basic movement tutorial</td>
+                <td><span style="color: var(--accent-emerald); font-weight: bold;">Low (20%)</span> — Curiosity, safety, immersion</td>
+              </tr>
+              <tr>
+                <td><strong>2. Rising Action (Transition)</strong></td>
+                <td>Minutes 4:00 – 8:00</td>
+                <td>Navigating decaying stilt bridges; encountering petrified stone warriors</td>
+                <td><span style="color: var(--accent-gold-light); font-weight: bold;">Medium (45%)</span> — Mild unease, anticipation</td>
+              </tr>
+              <tr>
+                <td><strong>3. First Combat Peak (Zone 2)</strong></td>
+                <td>Minutes 8:00 – 13:00</td>
+                <td>Ambush by 3 Shadow Minions; testing parry and silat combos</td>
+                <td><span style="color: var(--accent-rose); font-weight: bold;">High (75%)</span> — Adrenaline, focus, tactical reflexes</td>
+              </tr>
+              <tr>
+                <td><strong>4. Breather &amp; Puzzle (Zone 3)</strong></td>
+                <td>Minutes 13:00 – 18:00</td>
+                <td>Reaching safe incense well; rotating Wayang artifact to unlock gate</td>
+                <td><span style="color: var(--accent-teal); font-weight: bold;">Moderate (40%)</span> — Intellectual focus, relaxation, eureka reward</td>
+              </tr>
+              <tr>
+                <td><strong>5. Climax: Boss Duel (Zone 4)</strong></td>
+                <td>Minutes 18:00 – 23:00</td>
+                <td>Duel against Corrupted Garuda; dodging aerial dives and parrying beak sweeps</td>
+                <td><span style="color: #ef4444; font-weight: bold;">Peak (95%)</span> — Intense excitement, high stakes, full mechanical mastery</td>
+              </tr>
+              <tr>
+                <td><strong>6. Resolution &amp; Catharsis</strong></td>
+                <td>Minutes 23:00 – 25:00</td>
+                <td>Cleansing the solar altar; sunlight breaks through clouds; zone restored</td>
+                <td><span style="color: var(--accent-emerald); font-weight: bold;">Low (15%)</span> — Catharsis, triumphant relief, pride</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3.4: Game Balancing & Tuning Parameters -->
+      <section class="card" id="game-tuning">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">⚙️</div>
+            <h2 class="card-title">3.4 Mathematical Game Balancing &amp; Combat Tuning Tables</h2>
+          </div>
+          <span class="academic-pill">CLO2 Critical Tuning Parameters</span>
+        </div>
+
+        <p class="lead">
+          Game feel in an action-adventure relies on millisecond-level responsiveness. Below are the precise mathematical tuning parameters established for player mobility and combat interactions:
+        </p>
+
+        <h3>Player Character Combat Parameters</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Action Parameter</th>
+                <th>Base Value</th>
+                <th>Invulnerability (i-Frames)</th>
+                <th>Stamina Cost</th>
+                <th>Recovery Latency</th>
+                <th>Tuning Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Light Keris Slash</strong></td>
+                <td>18 Damage</td>
+                <td>None</td>
+                <td>10 Stamina</td>
+                <td>0.20 seconds</td>
+                <td>Fast jab; low commitment; initiates basic 3-hit combo chain.</td>
+              </tr>
+              <tr>
+                <td><strong>Heavy Silat Strike</strong></td>
+                <td>45 Damage</td>
+                <td>None</td>
+                <td>30 Stamina</td>
+                <td>0.65 seconds</td>
+                <td>High risk/reward; breaks stone armor; punishes mistimed execution.</td>
+              </tr>
+              <tr>
+                <td><strong>Dodge Roll (Elak)</strong></td>
+                <td>0 Damage</td>
+                <td><strong>0.25 seconds (15 frames @ 60fps)</strong></td>
+                <td>20 Stamina</td>
+                <td>0.15 seconds</td>
+                <td>Generous enough for casual players, but stamina cost prevents infinite rolling.</td>
+              </tr>
+              <tr>
+                <td><strong>Timed Parry (Tangkis)</strong></td>
+                <td>Counters for 60 Dmg</td>
+                <td>Active during counter</td>
+                <td>5 Stamina (Refunded on success)</td>
+                <td>0.30s (if missed)</td>
+                <td><strong>Tuned to 0.18s window (11 frames)</strong>; delivers high gratification upon success.</td>
+              </tr>
+              <tr>
+                <td><strong>Stamina Regeneration</strong></td>
+                <td>25 pts / sec</td>
+                <td>Delay: 0.8s after action</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Full 100 pt stamina bar recharges from zero in exactly 4.8 seconds.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Enemy Bestiary Balancing &amp; Threat Scaling</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Enemy Archetype</th>
+                <th>Max HP</th>
+                <th>Attack Damage</th>
+                <th>Wind-Up Telegraph Window</th>
+                <th>Aggro Radius</th>
+                <th>Behavioral AI Pattern</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Shadow Minion (Pocong Shade)</strong></td>
+                <td>50 HP</td>
+                <td>12 Damage</td>
+                <td>0.80 seconds (Red claw glow)</td>
+                <td>12.0 meters</td>
+                <td>Aggressive swarm tactics; circles player; easily staggered by light attacks.</td>
+              </tr>
+              <tr>
+                <td><strong>Corrupted Silat Phantom</strong></td>
+                <td>130 HP</td>
+                <td>28 Damage</td>
+                <td>0.50 seconds (Weapon flash)</td>
+                <td>16.0 meters</td>
+                <td>Duels player using traditional Langkah silat; guards attacks; vulnerable to parry ripostes.</td>
+              </tr>
+              <tr>
+                <td><strong>Boss: Corrupted Garuda Guardian</strong></td>
+                <td>650 HP</td>
+                <td>Phase 1: 35 Dmg<br>Phase 2: 50 Dmg</td>
+                <td>0.75 seconds (Screech + feather flair)</td>
+                <td>Entire Arena (30m)</td>
+                <td>Air dives, sweeping talon swipes, shadow projectile feathers. Phase 2 introduces flame trails.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3.5: 3D Asset Planning & Production Budget -->
+      <section class="card" id="asset-planning">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">📦</div>
+            <h2 class="card-title">3.5 3D Asset Planning &amp; Production Budget</h2>
+          </div>
+          <span class="academic-pill">Technical Feasibility Matrix</span>
+        </div>
+
+        <p class="lead">
+          To ensure our design can be realistically built during the subsequent 3D Game Programming course in Unity, our studio established rigid polygon, texture, and audio budgets.
+        </p>
+
+        <div class="grid-3">
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Polygon Count Budgets</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Hero Character (Arya):</strong> 18,000 – 22,000 triangles (including sarong cloth bones).</li>
+              <li><strong>Boss (Corrupted Garuda):</strong> 25,000 triangles (rigged wings and talon mesh).</li>
+              <li><strong>Common Minions:</strong> 4,000 – 6,000 triangles each.</li>
+              <li><strong>Modular Temple Wall Kit:</strong> 800 – 2,500 triangles per 4m piece.</li>
+              <li><strong>Interactive Props (Braziers/Pedestals):</strong> 1,200 triangles.</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">PBR Texture Pipeline</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Resolution Standard:</strong> 2048 x 2048 for characters and bosses; 1024 x 1024 for environment props.</li>
+              <li><strong>Texture Map Packing:</strong> Albedo (BaseColor), Normal Map (DirectX), and Channel-Packed RMA (R = Roughness, G = Metallic, B = Ambient Occlusion).</li>
+              <li><strong>Stylization Shaders:</strong> Custom URP stylized rim-lighting shader accentuating keris golden auras.</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Audio &amp; Animation Manifest</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Locomotion Animations:</strong> 8-way blend space (Idle, Walk, Jog, Sprint, Jump Start, Fall, Land, Vault).</li>
+              <li><strong>Martial Arts Animations:</strong> 3-hit Light Slash combo, 1 Heavy Silat Thrust, 1 Parry React, 4 Directional Dodge Rolls.</li>
+              <li><strong>Dynamic Music Layers:</strong> 3 vertical stem tracks (Atmosphere Flute, Gamelan Percussion, War Drums).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3.6: Transition to Week 4 -->
+      <div class="callout callout-success">
+        <h4>➡️ Transitioning into Week 4</h4>
+        <p>
+          With level architecture mapped, flow curves calculated, and mathematical tuning tables set, we conclude our design journey in <strong>Week 4 (Practical 004)</strong> with rigorous design critique, peer reviews, side-by-side Before/After comparison analysis, and our final refined Game Design specification.
+        </p>
+        <div style="margin-top: 1rem;">
+          <a href="week4.html" class="btn btn-primary btn-sm">Proceed to Week 4: Improving Our Game Design →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>The Making of Hikayat: Echoes of the Keris</h4>
+        <p>BACS3233 Computer Game Design Assignment 1 • Tunku Abdul Rahman University of Management and Technology.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Weekly Milestones</h4>
+        <ul>
+          <li><a href="week1.html">Week 1: The Birth of Our Game</a></li>
+          <li><a href="week2.html">Week 2: How Our Game Works</a></li>
+          <li><a href="week3.html">Week 3: Designing Gameplay</a></li>
+          <li><a href="week4.html">Week 4: Improving Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Course Meta</h4>
+        <ul>
+          <li><a href="team.html">Studio Members</a></li>
+          <li><a href="evidence.html">Practical Checkpoints</a></li>
+          <li><a href="README.md">Syllabus Rubric</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Studio Dash Quack • TAR UMT FCIT</div>
+      <div>Week 3 Practical Documentation Completed</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

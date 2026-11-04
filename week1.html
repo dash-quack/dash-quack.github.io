@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1: The Birth of Our Game | The Making of Hikayat</title>
+  <meta name="description" content="Week 1 Game Design documentation: Theme research, cultural inspiration, idea exploration, Game Concept Card, and 7 Structural Elements of e-Games.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Academic Rubric Banner -->
+  <aside class="academic-banner" aria-label="Course Academic Information">
+    <div class="academic-banner-inner">
+      <div>
+        <strong>TAR UMT</strong> • Faculty of Computing and Information Technology • <strong>BACS3233 Computer Game Design</strong>
+      </div>
+      <div class="academic-pills">
+        <span class="academic-pill">Practical: <strong>001 (Week 1)</strong></span>
+        <span class="academic-pill">Topic: <strong>Overview &amp; Structural Elements</strong></span>
+        <span class="academic-pill">Theme: <strong>Culture Game</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo-icon">🗡️</div>
+        <div class="brand-text">
+          <span class="brand-title">THE MAKING OF HIKAYAT</span>
+          <span class="brand-subtitle">Studio Dash Quack • Portfolio</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Overview</a></li>
+          <li class="nav-item"><a href="week1.html" class="nav-link active">Week 1 <span class="nav-badge-pill">Birth</span></a></li>
+          <li class="nav-item"><a href="week2.html" class="nav-link">Week 2 <span class="nav-badge-pill">Mechanics</span></a></li>
+          <li class="nav-item"><a href="week3.html" class="nav-link">Week 3 <span class="nav-badge-pill">Gameplay</span></a></li>
+          <li class="nav-item"><a href="week4.html" class="nav-link">Week 4 <span class="nav-badge-pill">Refinement</span></a></li>
+          <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="evidence.html" class="nav-link">Evidence Log</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-inner">
+        <span class="page-week-indicator">Week 1 • Practical 001 Focus</span>
+        <h1 class="page-title">The Birth of Our Game</h1>
+        <p class="page-description">
+          Documenting our journey from theme exploration and cultural research to divergent idea generation, the formation of Studio Dash Quack, the Game Concept Card, and the application of Topic 1's Structural Elements of e-Games.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Week 1 Focus Box -->
+      <div class="callout callout-info">
+        <h4>🎯 Practical 001 Learning Objectives &amp; Checkpoints</h4>
+        <p>
+          In accordance with the Assignment 1 brief, this page demonstrates <em>how our ideas begin, develop, and change</em> throughout the design process rather than presenting only a static final product. It specifically applies the <strong>7 Structural Elements of e-Games</strong> (Topic 1: Overview of Computer Game Design).
+        </p>
+      </div>
+
+      <!-- Section 1: Studio Formation & Theme Selection -->
+      <section class="card" id="theme-research">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🏛️</div>
+            <h2 class="card-title">1.1 Group Formation &amp; Theme Confirmation</h2>
+          </div>
+          <span class="academic-pill">Assigned Theme: <strong>Culture Game</strong></span>
+        </div>
+
+        <p class="lead">
+          During the Week 1 practical session, our group formed <strong>Studio Dash Quack</strong> comprising 4 members. We confirmed our assigned theme: <strong>Culture Game</strong>.
+        </p>
+
+        <p>
+          We chose the <strong>Culture Game</strong> theme because Malaysian and Southeast Asian folklore remains vastly underrepresented in the 3D action-adventure space. By drawing from living traditional arts—specifically <em>Wayang Kulit</em> (traditional shadow puppetry), the craftsmanship and spiritual lore of the <em>Keris</em>, and indigenous folklore like <em>Puteri Santubong</em> and <em>Sang Kelembai</em>—we saw a compelling opportunity to merge evocative storytelling with innovative light-and-shadow gameplay mechanics.
+        </p>
+
+        <h3>Cultural Inspiration Sources &amp; Moodboard</h3>
+        <div class="grid-3">
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">1. Wayang Kulit Kelantan</h4>
+            <p style="font-size: 0.88rem;">
+              The ancient art of bovine leather shadow puppetry projected against a cloth screen by an oil lamp. Inspires our core environmental puzzle mechanic: rotating 3D historical artifacts under directional sunlight to cast matching silhouette keys onto ancient stone doors.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">2. The Spiritual Keris Blade</h4>
+            <p style="font-size: 0.88rem;">
+              The asymmetrical dagger forged from folded celestial iron and nickel, renowned in Malay culture for its distinct wavy blade (<em>lok</em>) and pamor damascus patterns. Serves as Arya's living ancestral weapon capable of absorbing and refracting spiritual sunlight.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">3. Folkloric Architecture &amp; Bestiary</h4>
+            <p style="font-size: 0.88rem;">
+              Traditional <em>Rumah Tiang Dua Belas</em> timber stilt joinery, carved floral motifs (<em>Awan Larat</em>), and mythical guardians: corrupted Garuda avian spirits and stone-petrified ruins influenced by the <em>Sang Kelembai</em> legend.
+            </p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Industry Reference Games</h3>
+        <p>
+          We analyzed how global cultural action-adventure titles successfully translate indigenous art styles into compelling 3D gameplay:
+        </p>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Benchmark Game</th>
+                <th>Cultural Foundation</th>
+                <th>Key Design Takeaway for Hikayat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Raji: An Ancient Epic</strong></td>
+                <td>Ancient Indian mythology &amp; Pahari miniature painting</td>
+                <td>How to integrate traditional religious murals and architectural storytelling seamlessly into level backgrounds.</td>
+              </tr>
+              <tr>
+                <td><strong>Kena: Bridge of Spirits</strong></td>
+                <td>Balinese and East Asian animist spirituality</td>
+                <td>Pacing balance between charming spiritual exploration, environmental puzzles, and tight, high-stakes melee combat.</td>
+              </tr>
+              <tr>
+                <td><strong>Ghost of Tsushima</strong></td>
+                <td>Feudal Japanese Samurai cinema</td>
+                <td>Diegetic environmental guidance (guiding wind, yellow songbirds) over intrusive HUD markers, reinforcing cultural immersion.</td>
+              </tr>
+              <tr>
+                <td><strong>Okami</strong></td>
+                <td>Japanese Shinto folklore &amp; Sumi-e ink wash</td>
+                <td>How a distinct traditional art technique (the Celestial Brush) can serve as both an expressive combat tool and a world puzzle solver.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2: Idea Exploration & Evolution -->
+      <section class="card" id="idea-exploration">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">💡</div>
+            <h2 class="card-title">1.2 Idea Exploration &amp; Divergent Brainstorming</h2>
+          </div>
+          <span class="academic-pill">Design Evolution</span>
+        </div>
+
+        <p class="lead">
+          To ensure a thorough design exploration, our studio brainstormed three divergent game concepts during the Week 1 practical before converging on our final direction.
+        </p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Concept Proposal</th>
+                <th>Core Gameplay Hook</th>
+                <th>Strengths</th>
+                <th>Weaknesses &amp; Elimination Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Proposal A: "Wau: Wind Rider"</strong><br><small style="color: var(--accent-teal);">Genre: Flight Exploration Simulator</small></td>
+                <td>Player controls an oversized Malaysian kite (Wau Bulan) riding coastal thermals to deliver spiritual offerings between islands.</td>
+                <td>Relaxing pacing; strong visual novelty; authentic traditional kite motifs.</td>
+                <td>Lacked dynamic player interaction models; difficult to construct diverse challenges; limited combat and tuning depth required for CLO2.</td>
+              </tr>
+              <tr>
+                <td><strong>Proposal B: "Bayang: Shadow Weaver"</strong><br><small style="color: var(--accent-teal);">Genre: 2D Shadow Puzzle Platformer</small></td>
+                <td>A 2.5D puzzle platformer where the player walks on 2D shadows cast by 3D background objects (similar to <em>Contrast</em>).</td>
+                <td>Deep puzzle potential; direct homage to Wayang Kulit cloth screens.</td>
+                <td>Did not fulfill the assignment requirement for a rich <strong>3D game design</strong> with 3D spatial navigation and third-person camera systems.</td>
+              </tr>
+              <tr style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--accent-gold);">
+                <td><strong>Proposal C (Selected): "Hikayat: Echoes of the Keris"</strong><br><small style="color: var(--accent-gold-light);">Genre: 3D Cultural Action-Adventure</small></td>
+                <td>Full 3D third-person adventure combining Silat martial combat with 3D light-reflection Wayang puzzles and ancestral spirit restoration.</td>
+                <td>Exceptional synergy with CLO2 (control schemes, spatial 3D flow, combat tuning); rich narrative lore; scalable for 3D Game Programming.</td>
+                <td><strong>Selected:</strong> We retained Proposal B's brilliant shadow-manipulation concept and elevated it into full 3D spatial environmental puzzle chambers!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-gold">
+          <h4>🔄 How Our Design Changed During Week 1</h4>
+          <p>
+            Initially, our group debated between a peaceful 2D shadow puzzle game and a high-speed flying game. During our practical tutor consultation, we realized that an avatar-based 3D action-adventure provided the richest canvas to demonstrate <strong>CLO2 (interaction models, ergonomic controller schemes, spatial level flow, and tuning parameters)</strong>. Consequently, we merged Proposal B's Wayang shadow puzzles as the mental challenge pillar of Proposal C's 3D world.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Official Game Concept Card -->
+      <section class="card" id="concept-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🎴</div>
+            <h2 class="card-title">1.3 Official Game Concept Card</h2>
+          </div>
+          <span class="nav-badge-pill">Practical 001 Requirement</span>
+        </div>
+
+        <div class="concept-card">
+          <h2 style="color: var(--accent-gold-light); margin-top: 0; font-size: 2rem;">THE MAKING OF HIKAYAT: ECHOES OF THE KERIS</h2>
+          <p style="font-size: 1.1rem; color: #f1f5f9; font-style: italic;">
+            "When the celestial eclipse swallows Mount Santubong, only the spirit blade can cast the light that unveils truth from shadow."
+          </p>
+
+          <div class="concept-meta-grid">
+            <div>
+              <div class="meta-field-label">Working Title</div>
+              <div class="meta-field-value">Hikayat: Echoes of the Keris</div>
+            </div>
+            <div>
+              <div class="meta-field-label">Assigned Theme</div>
+              <div class="meta-field-value">Culture Game (Malaysian Folklore)</div>
+            </div>
+            <div>
+              <div class="meta-field-label">Genre</div>
+              <div class="meta-field-value">3D Third-Person Action-Adventure &amp; Puzzle</div>
+            </div>
+            <div>
+              <div class="meta-field-label">Target Audience</div>
+              <div class="meta-field-value">Ages 12+ • Fans of Kena, Zelda, and Okami</div>
+            </div>
+            <div>
+              <div class="meta-field-label">Target Platform</div>
+              <div class="meta-field-value">PC (Steam) • Gamepad &amp; Keyboard/Mouse</div>
+            </div>
+            <div>
+              <div class="meta-field-label">Art Direction</div>
+              <div class="meta-field-value">Semi-Stylized PBR with Batik &amp; Woodcarving Motifs</div>
+            </div>
+          </div>
+
+          <h3 style="color: #ffffff;">High-Concept Elevator Pitch</h3>
+          <p>
+            <strong>Hikayat: Echoes of the Keris</strong> is a 3D single-player cultural action-adventure where players step into the sandals of Arya, a spirited young silat apprentice who awakens the ancient Spirit of the Keris Taming Sari. As a supernatural eclipse corrupts the sacred highlands of Mount Santubong, players must master fluid silat martial arts, align sacred Wayang shadow puppets to solve ancestral temple riddles, and restore harmony between mortals and celestial folklore guardians.
+          </p>
+
+          <h3 style="color: #ffffff;">The Three Gameplay Pillars</h3>
+          <ol style="padding-left: 1.25rem; color: var(--text-secondary);">
+            <li style="margin-bottom: 0.5rem;"><strong>Light &amp; Shadow Puzzle Solving:</strong> Wielding the reflective pamor blade to channel beams of sunlight, manipulating physical Wayang screens to unlock sealed sanctums.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Rhythmic Silat Martial Melee:</strong> Evasive steps (<em>langkah</em>), defensive parries, and directional slashes tuned for rewarding timing and responsiveness.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Living Southeast Asian Mythology:</strong> Discovering forgotten folklore murals, experiencing diegetic gamelan musical reactivity, and cleansing corrupted mythic beasts.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Section 4: Structural Elements of e-Games -->
+      <section class="card" id="structural-elements">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">📐</div>
+            <h2 class="card-title">1.4 Application of Topic 1: The 7 Structural Elements of e-Games</h2>
+          </div>
+          <span class="academic-pill">Core Theoretical Framework</span>
+        </div>
+
+        <p class="lead">
+          As outlined in Topic 1 (Overview of Computer Game Design), all electronic games are constructed upon seven fundamental structural elements. Below, we articulate how each element is manifested in <em>Hikayat</em>.
+        </p>
+
+        <div class="grid-2">
+          <!-- 1. Rules -->
+          <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">1. Rules</h3>
+            <p style="font-size: 0.88rem;"><strong>The governing constraints that structure player actions and world behavior.</strong></p>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Operational Rules:</strong> Moving with WASD / Left-Stick; dodging consumes 20% stamina; parrying requires timing within a 0.18-second window before an enemy impact.</li>
+              <li><strong>Foundational Rules:</strong> The underlying mathematics governing hitpoints (100 HP max), physical collision bounding boxes, and shadow-casting projection rays calculated via light raycasts.</li>
+              <li><strong>Behavioral Rules:</strong> Fair play principles, single-player agency, checkpoint saving without permanent loss of unlocked cultural relics.</li>
+            </ul>
+          </div>
+
+          <!-- 2. Goals -->
+          <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">2. Goals</h3>
+            <p style="font-size: 0.88rem;"><strong>The motivational objectives that provide purpose and forward momentum.</strong></p>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Ultimate Goal:</strong> Ascend the summit of Mount Santubong, cleanse the Corrupted Garuda, and restore the Solar Solstice to dissipate the shadow curse.</li>
+              <li><strong>Short-Term Goals:</strong> Unlock the sealed stone gate of Zone 3 by solving the Wayang light alignment puzzle.</li>
+              <li><strong>Moment-to-Moment Goals:</strong> Successfully parry a shadow minion's slash; locate the nearest Spirit Brazier to recharge health.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Interaction -->
+          <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">3. Interaction</h3>
+            <p style="font-size: 0.88rem;"><strong>The communication loop between the player and the game world.</strong></p>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Avatar Direct Control:</strong> Third-person over-the-shoulder responsive navigation with smooth kinematic transitions (running, climbing, vaulting).</li>
+              <li><strong>World Manipulation:</strong> Rotating antique copper mirrors to refract light beams across overgrown temple ruins; lighting incense braziers.</li>
+              <li><strong>Cultural NPC Interaction:</strong> Conversing with the Dalang (Master Puppeteer) spirit at waypoints to receive cryptic folklore hints.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Challenges -->
+          <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">4. Challenges</h3>
+            <p style="font-size: 0.88rem;"><strong>Obstacles that require player skill, knowledge, and problem-solving to overcome.</strong></p>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Spatial Navigation:</strong> Scaling decaying stilt-house scaffolding and leap across ravine ledges without falling into shadow brambles.</li>
+              <li><strong>Cognitive / Puzzle:</strong> Deciphering Wayang shadow silhouettes by identifying which mythic animal shape corresponds to ancient mural inscriptions.</li>
+              <li><strong>Dexterity &amp; Reflexes:</strong> Reacting to fast telegraphed attacks from multiple shadow hounds while managing stamina reserves.</li>
+            </ul>
+          </div>
+
+          <!-- 5. Feedback -->
+          <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">5. Feedback</h3>
+            <p style="font-size: 0.88rem;"><strong>Sensory cues informing the player about the state of their actions.</strong></p>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Visual:</strong> Golden spark bloom upon a successful parry; screen borders darken with shadow vignette as health drops below 25%.</li>
+              <li><strong>Auditory:</strong> Resonant gamelan gong chime when a puzzle element clicks into place; dynamic ethnic flute crescendo during combat.</li>
+              <li><strong>Haptic / Kinesthetic:</strong> Controller motor vibration pulses when standing near concealed ancestral pamor ore.</li>
+            </ul>
+          </div>
+
+          <!-- 6. Outcomes -->
+          <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">6. Outcomes</h3>
+            <p style="font-size: 0.88rem;"><strong>The consequences and quantifiable results of player performance.</strong></p>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Success State:</strong> Cleansing a sanctum brings radiant daylight back to the zone, dispels creeping shadow barriers, and unlocks new Silat stances.</li>
+              <li><strong>Failure State:</strong> Health reaches 0 -> Arya collapses, returning to the nearest incense checkpoint with enemies reset, but completed puzzle states preserved.</li>
+              <li><strong>Progression Rating:</strong> Lore completion percentage and spiritual keris purity ranking at the end of each chapter.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. Representation -->
+        <div style="margin-top: 1.5rem; background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <h3 style="margin-top: 0;">7. Representation</h3>
+          <p style="font-size: 0.88rem;"><strong>The expressive audio-visual and conceptual framing of the virtual world.</strong></p>
+          <div class="grid-3">
+            <div>
+              <h4 style="color: var(--accent-gold-light);">Visual Aesthetics</h4>
+              <p style="font-size: 0.85rem;">
+                Stylized PBR 3D rendering. Warm golden sunlight piercing through dense tropical canopies, contrasted against misty deep indigo shadow miasma. Traditional Kelantanese floral batik carvings adorn temple pillars.
+              </p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-gold-light);">Acoustic Design</h4>
+              <p style="font-size: 0.85rem;">
+                Diegetic live recordings of Malaysian gamelan, rebab (two-stringed spiked fiddle), and serunai (reed wind instrument) dynamically cross-faded using vertical orchestration layers based on combat intensity.
+              </p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-gold-light);">Thematic Narrative</h4>
+              <p style="font-size: 0.85rem;">
+                A celebration of cultural preservation, balance between light and dark, and humility in ancestral heritage rather than sheer destructive dominance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Initial Concept Sketches & Working Drafts -->
+      <section class="card" id="sketches">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">✏️</div>
+            <h2 class="card-title">1.5 Early Working Sketches &amp; Conceptual Drafts</h2>
+          </div>
+          <span class="academic-pill">Dated Evidence: Week 1</span>
+        </div>
+
+        <p class="lead">
+          During Practical 001, our team gathered around the collaborative whiteboard to map out initial character silhouettes, keris blade configurations, and Wayang shadow mechanics.
+        </p>
+
+        <div class="grid-3">
+          <div class="diagram-container">
+            <!-- SVG Conceptual Sketch 1 -->
+            <svg viewBox="0 0 300 220" width="100%" height="160">
+              <rect width="300" height="220" fill="#0d1320" rx="8" stroke="#334155"/>
+              <text x="150" y="25" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="bold">SKETCH 1: ARYA CHARACTER SILHOUETTE</text>
+              <!-- Stick-figure/Mannequin sketch of silat pose -->
+              <circle cx="150" cy="65" r="14" fill="none" stroke="#94a3b8" stroke-width="2"/>
+              <line x1="150" y1="80" x2="150" y2="135" stroke="#94a3b8" stroke-width="3"/>
+              <!-- Arms in Silat Stance -->
+              <line x1="150" y1="95" x2="115" y2="115" stroke="#94a3b8" stroke-width="2.5"/>
+              <line x1="115" y1="115" x2="95" y2="90" stroke="#94a3b8" stroke-width="2.5"/>
+              <!-- Right arm holding Keris -->
+              <line x1="150" y1="95" x2="185" y2="110" stroke="#94a3b8" stroke-width="2.5"/>
+              <path d="M 185 110 Q 195 105 205 110 T 225 108" fill="none" stroke="#f59e0b" stroke-width="3"/> <!-- Keris lok -->
+              <!-- Legs in kuda-kuda stance -->
+              <line x1="150" y1="135" x2="120" y2="185" stroke="#94a3b8" stroke-width="2.5"/>
+              <line x1="150" y1="135" x2="185" y2="185" stroke="#94a3b8" stroke-width="2.5"/>
+              <!-- Ground line -->
+              <line x1="80" y1="185" x2="220" y2="185" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <text x="150" y="208" text-anchor="middle" fill="#64748b" font-size="10">Kuda-kuda martial grounding</text>
+            </svg>
+            <p class="diagram-caption">Rough draft 1.1: Arya's low-center martial stance and 7-curve Keris blade angle.</p>
+          </div>
+
+          <div class="diagram-container">
+            <!-- SVG Conceptual Sketch 2 -->
+            <svg viewBox="0 0 300 220" width="100%" height="160">
+              <rect width="300" height="220" fill="#0d1320" rx="8" stroke="#334155"/>
+              <text x="150" y="25" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="bold">SKETCH 2: WAYANG SHADOW CASTER</text>
+              <!-- Sun source -->
+              <circle cx="50" cy="65" r="16" fill="#f59e0b" opacity="0.3"/>
+              <circle cx="50" cy="65" r="10" fill="#fbbf24"/>
+              <!-- Light rays -->
+              <line x1="65" y1="75" x2="140" y2="115" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <!-- 3D Pedestal and Artifact -->
+              <rect x="135" y="115" width="20" height="35" fill="#334155"/>
+              <polygon points="145,95 155,115 135,115" fill="#06b6d4"/>
+              <!-- Shadow cast on wall -->
+              <rect x="220" y="60" width="8" height="110" fill="#1e293b"/>
+              <polygon points="215,85 215,135 210,110" fill="#020617"/>
+              <text x="255" y="115" fill="#ef4444" font-size="9">Shadow Key</text>
+              <text x="150" y="208" text-anchor="middle" fill="#64748b" font-size="10">Light raycast vector math test</text>
+            </svg>
+            <p class="diagram-caption">Rough draft 1.2: Calculating real-time light raycasts through rotating pedestals.</p>
+          </div>
+
+          <div class="diagram-container">
+            <!-- SVG Conceptual Sketch 3 -->
+            <svg viewBox="0 0 300 220" width="100%" height="160">
+              <rect width="300" height="220" fill="#0d1320" rx="8" stroke="#334155"/>
+              <text x="150" y="25" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="bold">SKETCH 3: ENVIRONMENT VISTA WEENIE</text>
+              <!-- Mountain and Spire -->
+              <polygon points="150,55 70,170 230,170" fill="#1e293b" stroke="#475569"/>
+              <line x1="150" y1="55" x2="150" y2="35" stroke="#f59e0b" stroke-width="2"/>
+              <circle cx="150" cy="35" r="4" fill="#fbbf24"/>
+              <!-- Player in foreground looking up -->
+              <circle cx="60" cy="160" r="5" fill="#06b6d4"/>
+              <line x1="60" y1="165" x2="60" y2="185" stroke="#06b6d4" stroke-width="2"/>
+              <line x1="62" y1="160" x2="145" y2="40" stroke="#06b6d4" stroke-width="1" stroke-dasharray="2,4"/>
+              <text x="150" y="208" text-anchor="middle" fill="#64748b" font-size="10">Sightline to Mount Santubong Spire</text>
+            </svg>
+            <p class="diagram-caption">Rough draft 1.3: Framing the primary landmark (Weenie) from initial spawn.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Next Steps Transition -->
+      <div class="callout callout-success">
+        <h4>➡️ Transitioning into Week 2</h4>
+        <p>
+          With our theme confirmed, initial concept validated, and the 7 structural elements mapped out, our next step in <strong>Week 2 (Practical 002)</strong> is designing <em>how our game works</em>: crafting our operant conditioning reinforcement schedules, puzzle systems, ergonomic control mappings, and UI HUD mockups.
+        </p>
+        <div style="margin-top: 1rem;">
+          <a href="week2.html" class="btn btn-primary btn-sm">Proceed to Week 2: How Our Game Works →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>The Making of Hikayat: Echoes of the Keris</h4>
+        <p>BACS3233 Computer Game Design Assignment 1 • Tunku Abdul Rahman University of Management and Technology.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Weekly Milestones</h4>
+        <ul>
+          <li><a href="week1.html">Week 1: The Birth of Our Game</a></li>
+          <li><a href="week2.html">Week 2: How Our Game Works</a></li>
+          <li><a href="week3.html">Week 3: Designing Gameplay</a></li>
+          <li><a href="week4.html">Week 4: Improving Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Course Meta</h4>
+        <ul>
+          <li><a href="team.html">Studio Members</a></li>
+          <li><a href="evidence.html">Practical Checkpoints</a></li>
+          <li><a href="README.md">Syllabus Rubric</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Studio Dash Quack • TAR UMT FCIT</div>
+      <div>Week 1 Practical Documentation Completed</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

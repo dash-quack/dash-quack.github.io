@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2: How Our Game Works | The Making of Hikayat</title>
+  <meta name="description" content="Week 2 Game Design documentation: Operant conditioning, rewards and penalties, folklore narrative, puzzle design, sensory feedback, control schemes, items/inventory, and UI mockups.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Academic Rubric Banner -->
+  <aside class="academic-banner" aria-label="Course Academic Information">
+    <div class="academic-banner-inner">
+      <div>
+        <strong>TAR UMT</strong> • Faculty of Computing and Information Technology • <strong>BACS3233 Computer Game Design</strong>
+      </div>
+      <div class="academic-pills">
+        <span class="academic-pill">Practical: <strong>002 (Week 2)</strong></span>
+        <span class="academic-pill">Focus: <strong>Rules, Mechanics &amp; UI</strong></span>
+        <span class="academic-pill">Outcome: <strong>CLO2 Interaction Models &amp; Controls</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo-icon">🗡️</div>
+        <div class="brand-text">
+          <span class="brand-title">THE MAKING OF HIKAYAT</span>
+          <span class="brand-subtitle">Studio Dash Quack • Portfolio</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Overview</a></li>
+          <li class="nav-item"><a href="week1.html" class="nav-link">Week 1 <span class="nav-badge-pill">Birth</span></a></li>
+          <li class="nav-item"><a href="week2.html" class="nav-link active">Week 2 <span class="nav-badge-pill">Mechanics</span></a></li>
+          <li class="nav-item"><a href="week3.html" class="nav-link">Week 3 <span class="nav-badge-pill">Gameplay</span></a></li>
+          <li class="nav-item"><a href="week4.html" class="nav-link">Week 4 <span class="nav-badge-pill">Refinement</span></a></li>
+          <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="evidence.html" class="nav-link">Evidence Log</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-inner">
+        <span class="page-week-indicator">Week 2 • Practical 002 Focus</span>
+        <h1 class="page-title">How Our Game Works</h1>
+        <p class="page-description">
+          Transitioning from our high-level concept into concrete gameplay architecture: behavioral operant conditioning, rewards and penalties, folklore narrative, Wayang puzzle mechanics, sensory feedback, dual-input control schemes, and diegetic UI.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Week 2 Focus Callout -->
+      <div class="callout callout-info">
+        <h4>🎯 Practical 002 Lecture Application Matrix</h4>
+        <p>
+          This documentation applies 8 core lecture concepts from Topic 2 and 3: <strong>Operant Conditioning</strong>, <strong>Rewards and Penalties</strong>, <strong>Narrative Design</strong>, <strong>Puzzle Design</strong>, <strong>Feedback Design</strong>, <strong>Control Schemes</strong>, <strong>Items &amp; Inventory</strong>, and <strong>User Interface (UI) Design</strong>.
+        </p>
+      </div>
+
+      <!-- Section 2.1: Operant Conditioning & Reinforcement Schedules -->
+      <section class="card" id="operant-conditioning">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🧠</div>
+            <h2 class="card-title">2.1 Operant Conditioning &amp; Behavioral Psychology</h2>
+          </div>
+          <span class="academic-pill">Psychological Game Design</span>
+        </div>
+
+        <p class="lead">
+          Operant conditioning (B.F. Skinner) dictates how player behaviors are learned, strengthened, or extinguished through environmental feedback loops, stimuli, and reinforcement schedules.
+        </p>
+
+        <div class="grid-2">
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Positive Reinforcement (+ Stimulus Added)</h4>
+            <p style="font-size: 0.88rem;">
+              When Arya executes a <strong>Perfect Parry</strong> (timing blade block within 0.18s), the game immediately triggers a resonant metallic chime, a brilliant burst of golden sun sparks, and awards <strong>+1 Spirit Shard</strong>. This delivers an immediate rush of competence, training players to embrace defensive rhythm.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal-light); margin-top: 0;">Negative Reinforcement (- Unpleasant Stimulus Removed)</h4>
+            <p style="font-size: 0.88rem;">
+              Corrupted shadow zones subject Arya to a suffocating dark fog, muffled audio, and a continuous <strong>stamina regeneration penalty (-40%)</strong>. Lighting the central ancestral brazier instantly banishes the fog, restores natural vibrant sunlight, and removes the stamina drain, rewarding environmental cleansing.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-rose); margin-top: 0;">Positive Punishment (+ Aversive Stimulus Added)</h4>
+            <p style="font-size: 0.88rem;">
+              Blindly button-mashing the heavy attack triggers a severe <strong>stamina exhaustion stagger</strong> (Arya gasps for breath for 1.2 seconds, unable to dodge). During this vulnerable state, enemies unleash heavy unblockable knockback strikes, discouraging thoughtless offense.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: #cbd5e1; margin-top: 0;">Negative Punishment (- Valued Stimulus Removed)</h4>
+            <p style="font-size: 0.88rem;">
+              Failing a Wayang shadow alignment puzzle resets the rotating mirror angles, causing the accumulated beam charge to dissipate. While it does not kill the player, it subtracts the momentary time and positional progress, encouraging careful spatial observation.
+            </p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Four Schedules of Reinforcement</h3>
+        <p>
+          To maintain high intrinsic motivation while preventing predictable player exhaustion, our systems incorporate all four classic reinforcement schedules:
+        </p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Schedule Type</th>
+                <th>Underlying Behavioral Mechanism</th>
+                <th>Application in Hikayat</th>
+                <th>Impact on Player Retention &amp; Pacing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fixed-Ratio (FR)</strong></td>
+                <td>Reward delivered after a fixed number of completed target actions.</td>
+                <td><strong>Combo Arts Unlock:</strong> Every 5 successful silat counter-attacks fills 1 whole segment of the Keris Celestial Charge bar.</td>
+                <td>High, predictable response rate. Encourages active mastery of defensive mechanics.</td>
+              </tr>
+              <tr>
+                <td><strong>Variable-Ratio (VR)</strong></td>
+                <td>Reward delivered after an unpredictable, varying number of responses (Slot Machine principle).</td>
+                <td><strong>Ancestral Pottery Loot:</strong> Sashing ceramic offering jars yields common clay shards, with an unpredictable 12% probability of discovering rare <em>Batik Talisman Glyphs</em>.</td>
+                <td>Extremely high, persistent engagement. Drives compulsive spatial exploration of every temple corner.</td>
+              </tr>
+              <tr>
+                <td><strong>Fixed-Interval (FI)</strong></td>
+                <td>Reward available only after a fixed time duration has elapsed.</td>
+                <td><strong>Dawn Meditation Wells:</strong> Sacred water shrines refill with healing essence at fixed 10-minute game clock intervals.</td>
+                <td>Creates a steady pacing cycle; prompts players to retreat to safe zones periodically to regroup.</td>
+              </tr>
+              <tr>
+                <td><strong>Variable-Interval (VI)</strong></td>
+                <td>Reward becomes available around an unpredictable average time window.</td>
+                <td><strong>Wandering Dalang Spirit:</strong> The mystical shadow puppeteer appears unexpectedly at jungle waypoints every 15–25 minutes offering cryptic lore blessings.</td>
+                <td>Prevents complacency; rewards patient world observation without predictable exploitation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2.2: Rewards and Penalties Matrix -->
+      <section class="card" id="rewards-penalties">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">⚖️</div>
+            <h2 class="card-title">2.2 Rewards and Penalties Matrix</h2>
+          </div>
+          <span class="academic-pill">Game Balance Architecture</span>
+        </div>
+
+        <p class="lead">
+          Every gameplay action directly impacts Arya's immediate physical state, short-term tactical advantages, and overarching game economy progression:
+        </p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Player Action / State</th>
+                <th>Immediate Sensory Feedback</th>
+                <th>Short-Term Gameplay Impact</th>
+                <th>Long-Term Economy / Progression Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Perfect Timed Parry</strong></td>
+                <td>Crisp metallic blade clash, golden spark burst, screen camera micro-freeze (0.05s)</td>
+                <td>Enemy staggered for 2.0s; vulnerability window opened for critical riposte</td>
+                <td>Earns <em>Spirit Shards</em> used to unlock ancient Silat stance combos at shrines</td>
+              </tr>
+              <tr>
+                <td><strong>Mistimed Guard (Too Early)</strong></td>
+                <td>Dull wooden thud sound, blue stamina bar flashes red</td>
+                <td>Takes 25% chip damage; loses 50% max stamina instantly</td>
+                <td>Wastes consumable healing herbs if player is forced to recuperate</td>
+              </tr>
+              <tr>
+                <td><strong>Solving Wayang Shadow Puzzle</strong></td>
+                <td>Deep Gamelan bronze gong chime, stone lock mechanism animates, light flood</td>
+                <td>Unlocks sealed sanctum gateway; dispels local shadow aura</td>
+                <td>Awards unique <em>Ancestral Relic Key</em> permanently progressing Chapter 1</td>
+              </tr>
+              <tr>
+                <td><strong>Stamina Depletion (Over-sprint/over-attack)</strong></td>
+                <td>Muffled heartbeat, Arya visibly panting, movement speed slows by 60%</td>
+                <td>Cannot dodge, jump, or attack for 1.2 seconds</td>
+                <td>High risk of fatal hit; enforces disciplined resource management</td>
+              </tr>
+              <tr>
+                <td><strong>Player Death (HP Reaches 0)</strong></td>
+                <td>Screen fades to deep indigo shadow smoke; mournful rebab violin string note</td>
+                <td>Respawn at nearest visited Incense Brazier checkpoint</td>
+                <td>Retains all solved puzzles and narrative relics; respawns common shadow minions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2.3: Cultural Narrative & Environmental Storytelling -->
+      <section class="card" id="narrative-design">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">📜</div>
+            <h2 class="card-title">2.3 Narrative &amp; Environmental Storytelling</h2>
+          </div>
+          <span class="academic-pill">Folklore World-Building</span>
+        </div>
+
+        <p class="lead">
+          Rather than relying solely on non-interactive cutscenes, <em>Hikayat</em> emphasizes <strong>diegetic environmental storytelling</strong>, embedding Malaysian folklore directly into the terrain, architecture, and visual props.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3>The Folklore Premise</h3>
+            <p>
+              Centuries ago, the guardians of the Seven Realms forged the <strong>Keris Taming Sari</strong> from meteoritic star-iron to channel solar energy and protect Mount Santubong. When an ancient celestial eclipse consumed the mountain, the mythical Garuda was corrupted by shadowy discord, plunging the valleys into perpetual twilight.
+            </p>
+            <p>
+              The player assumes the role of <strong>Arya</strong>, a silat apprentice guided by the whispering spirit residing within the dormant blade hilt. To rekindle the solar flame, Arya must seek out the four lost <em>lok</em> (blade waves) scattered across the ancient sanctuary.
+            </p>
+          </div>
+
+          <div>
+            <h3>Three-Act Game Narrative Arc</h3>
+            <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+              <li style="margin-bottom: 0.65rem;">
+                <strong style="color: var(--accent-gold-light);">Act I: The Awakening (Village of Permai):</strong>
+                Arya unearths the dormant Keris blade during the eclipse; learns basic silat movement and light-focusing; flees the encroaching shadow hound pack.
+              </li>
+              <li style="margin-bottom: 0.65rem;">
+                <strong style="color: var(--accent-gold-light);">Act II: The Trials of Wayang (Sanctuary Ruins):</strong>
+                Arya navigates the overgrown temple courtyards, solves the light-and-shadow puppetry chambers, and discovers the tragic corruption of the mountain's guardian spirits.
+              </li>
+              <li style="margin-bottom: 0.65rem;">
+                <strong style="color: var(--accent-gold-light);">Act III: The Solar Solstice (Summit of Santubong):</strong>
+                Climactic duel atop the mountain peak against the Corrupted Garuda; purifying the guardian using concentrated solar beams; restoring daylight across the archipelago.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 1.75rem;">Diegetic Environmental Storytelling Techniques</h3>
+        <div class="grid-3">
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">1. Petrified Stone Warriors</h4>
+            <p style="font-size: 0.85rem;">
+              Drawing from the <em>Sang Kelembai</em> myth (a folklore giant whose speech petrifies living beings), ancient warriors are found frozen mid-battle in stone around temple thresholds, warning players of imminent ambushes.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">2. Faded Batik Screen Murals</h4>
+            <p style="font-size: 0.85rem;">
+              Dilapidated temple walls feature traditional wax-resist batik frescoes that visually illustrate puzzle solutions and lore without breaking game immersion with artificial text popups.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">3. Audio Soundscape Transitions</h4>
+            <p style="font-size: 0.85rem;">
+              Peaceful areas feature gentle tropical cicadas and bamboo water fountains. As Arya approaches corrupted zones, the ambient soundscape becomes eerie and discordant, accompanied by distorted serunai flute trills.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.4: Puzzle Design & Mechanics -->
+      <section class="card" id="puzzle-design">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🧩</div>
+            <h2 class="card-title">2.4 Puzzle Design: The Wayang Shadow Caster</h2>
+          </div>
+          <span class="academic-pill">Core Intellectual Challenge</span>
+        </div>
+
+        <p class="lead">
+          Puzzles in <em>Hikayat</em> are built upon the tactile, spatial manipulation of 3D objects, light vectors, and silhouette alignment, directly paying homage to traditional Kelantanese shadow puppetry.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3>Puzzle Anatomy &amp; Gate-and-Key Structure</h3>
+            <p>
+              In Chapter 1, Zone 3, the path forward is barred by the <strong>Gateway of the Garuda</strong>, a massive stone door bearing an empty silhouette carving of the celestial bird.
+            </p>
+            <ol style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Light Source Activation:</strong> Player focuses Arya's Keris blade to reflect an overhead solar shaft into a central prism brazier.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Spatial Artifact Rotation:</strong> On a stone pedestal stands an asymmetrical, ancient carved bronze idol. Using the interaction controls, the player rotates the artifact along the X and Y axes.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Silhouette Alignment:</strong> The light casts the artifact's 2D shadow onto the translucent white silk screen mounted on the gate. When rotated to the precise 45° angle, the jagged edges align to form the majestic silhouette of the Garuda.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Gate Unlocking Mechanism:</strong> Upon matching, the gate's mechanical weights depress with a bronze gong chime, opening the portal into the final boss sanctum.
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <div class="diagram-container">
+              <!-- Inline SVG Puzzle Diagram -->
+              <svg viewBox="0 0 400 280" width="100%" height="220">
+                <rect width="400" height="280" rx="8" fill="#0d1424" stroke="#27354f"/>
+                <text x="200" y="28" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="bold">WAYANG SHADOW PROJECTION MECHANISM</text>
+                
+                <!-- Solar Beam -->
+                <circle cx="50" cy="80" r="14" fill="#fbbf24" opacity="0.3"/>
+                <circle cx="50" cy="80" r="8" fill="#f59e0b"/>
+                <path d="M 55 80 L 160 140" stroke="#fcd34d" stroke-width="3" stroke-dasharray="4,4"/>
+                <text x="90" y="95" fill="#fcd34d" font-size="9">Solar Ray</text>
+
+                <!-- Rotating Pedestal -->
+                <rect x="150" y="140" width="24" height="60" fill="#334155" rx="3"/>
+                <polygon points="162,110 178,140 146,140" fill="#06b6d4"/>
+                <path d="M 135 125 C 135 110 189 110 189 125" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="2,2"/>
+                <text x="162" y="102" text-anchor="middle" fill="#22d3ee" font-size="9">3D Rotation [Yaw/Pitch]</text>
+
+                <!-- Projected Shadow Cone -->
+                <polygon points="162,125 320,60 320,200" fill="rgba(245, 158, 11, 0.08)"/>
+                <line x1="162" y1="125" x2="320" y2="60" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="162" y1="125" x2="320" y2="200" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <!-- Silk Screen & Target Door -->
+                <rect x="320" y="45" width="12" height="175" fill="#1e293b" stroke="#f59e0b"/>
+                <!-- Shadow Silhouette -->
+                <polygon points="315,90 315,170 310,130" fill="#020617"/>
+                <text x="360" y="130" fill="#10b981" font-size="10" font-weight="bold">TARGET MATCH</text>
+                <text x="360" y="145" fill="#94a3b8" font-size="9">(Threshold: ±5°)</text>
+
+                <rect x="50" y="235" width="300" height="30" rx="4" fill="#151d2e"/>
+                <text x="200" y="254" text-anchor="middle" fill="#94a3b8" font-size="10">Fail-Safe: Audio harmonic frequency rises as angle nears target</text>
+              </svg>
+              <p class="diagram-caption">Figure 2.1: Real-time shadow projection geometry and alignment tolerance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.5: Feedback Design System -->
+      <section class="card" id="feedback-design">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🔊</div>
+            <h2 class="card-title">2.5 Multi-Modal Sensory Feedback System</h2>
+          </div>
+          <span class="academic-pill">Sensory Feedback Design</span>
+        </div>
+
+        <p class="lead">
+          Clear, instantaneous feedback across visual, auditory, and haptic channels ensures players never feel confused about game states, impact validity, or danger levels.
+        </p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Game State / Action</th>
+                <th>Visual Channel (Eyes)</th>
+                <th>Auditory Channel (Ears)</th>
+                <th>Haptic Channel (Hands / Rumble)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Normal Movement / Stroll</strong></td>
+                <td>Subtle cloth physics on Arya's sarong; kicked-up dust particles</td>
+                <td>Soft footsteps varying by terrain (dry stone vs wet jungle grass)</td>
+                <td>No motor vibration (neutral sensory baseline)</td>
+              </tr>
+              <tr>
+                <td><strong>Sprint &amp; Vault</strong></td>
+                <td>Speed lines at screen periphery; camera subtly widens FOV (+5°)</td>
+                <td>Rhythmic exertion breathing; rapid boot thuds</td>
+                <td>Subtle left-motor pulse upon landing contact</td>
+              </tr>
+              <tr>
+                <td><strong>Light Keris Slash</strong></td>
+                <td>Curved golden arc trail tracing the blade lok</td>
+                <td>Crisp swoosh; metallic blade whistle</td>
+                <td>Light high-frequency motor vibration (40ms)</td>
+              </tr>
+              <tr>
+                <td><strong>Successful Timed Parry</strong></td>
+                <td>Flash of golden sun flare; micro screen-freeze (3 frames)</td>
+                <td>Resonant bronze clash; immediate silence of background wind</td>
+                <td>Sharp, dual-motor heavy pulse (120ms, 100% intensity)</td>
+              </tr>
+              <tr>
+                <td><strong>Taking Enemy Damage</strong></td>
+                <td>Vigorous camera shake (trauma = 0.4); red edge flash vignette</td>
+                <td>Heavy blunt thud; Arya groans; gamelan tempo accelerates</td>
+                <td>Prolonged low-frequency motor rumble (250ms)</td>
+              </tr>
+              <tr>
+                <td><strong>Aligning Shadow Puzzle</strong></td>
+                <td>Golden glyphs on door illuminate progressively</td>
+                <td>Harmonic gamelan overtone swells in pitch as angle nears 100%</td>
+                <td>Subtle rhythmic heartbeat rumble when within 10° threshold</td>
+              </tr>
+              <tr>
+                <td><strong>Critical Health (&lt;25% HP)</strong></td>
+                <td>Pulsing deep red screen border; desaturated world colors</td>
+                <td>Low-pass audio filter (muffled world); loud visceral heartbeat</td>
+                <td>Continuous low-frequency pulse synchronized to heartbeat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2.6: Control Schemes & Ergonomic Mapping -->
+      <section class="card" id="control-schemes">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🎮</div>
+            <h2 class="card-title">2.6 Control Schemes &amp; Dual-Input Mapping</h2>
+          </div>
+          <span class="academic-pill">CLO2 Core Assessment Dimension</span>
+        </div>
+
+        <p class="lead">
+          Our control scheme is engineered around ergonomic finger posture and input priority. Fast combat actions are mapped to shoulder triggers, preserving player thumb dexterity for 360° camera orbit and avatar locomotion.
+        </p>
+
+        <!-- Controller Diagram Container -->
+        <div class="diagram-container">
+          <img src="assets/diagrams/gamepad-layout.svg" alt="Ergonomic Gamepad Control Mapping Diagram" style="border-radius: 8px;">
+          <p class="diagram-caption">Figure 2.2: Dual-analog controller mapping architecture indicating combat and interaction zones.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Gameplay Action</th>
+                <th>Gamepad Mapping (Xbox / PlayStation)</th>
+                <th>Keyboard &amp; Mouse Mapping</th>
+                <th>Ergonomic &amp; Cognitive Design Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Character Movement</strong></td>
+                <td>Left Thumbstick (Analog 360°)</td>
+                <td>W, A, S, D</td>
+                <td>Standard industry convention; allows seamless 8-directional walking and sprinting.</td>
+              </tr>
+              <tr>
+                <td><strong>Camera &amp; Target Lock</strong></td>
+                <td>Right Thumbstick (R3 to Lock-On)</td>
+                <td>Mouse Look / Middle Mouse Click</td>
+                <td>Decoupled from combat buttons, ensuring players retain full situational sightlines.</td>
+              </tr>
+              <tr>
+                <td><strong>Light Keris Slash</strong></td>
+                <td>Right Bumper (RB / R1)</td>
+                <td>Left Mouse Button (LMB)</td>
+                <td>Index finger trigger allows rapid rhythmic tapping without lifting thumb from camera stick.</td>
+              </tr>
+              <tr>
+                <td><strong>Heavy Silat Strike</strong></td>
+                <td>Right Trigger (RT / R2)</td>
+                <td>Right Mouse Button (RMB)</td>
+                <td>Analog trigger resistance provides a tactile sense of weight and charge momentum.</td>
+              </tr>
+              <tr>
+                <td><strong>Parry &amp; Guard</strong></td>
+                <td>Left Bumper (LB / L1)</td>
+                <td>Left Shift (Hold to Guard, Tap to Parry)</td>
+                <td>Left-hand defensive symmetry mirrors traditional martial stance balance.</td>
+              </tr>
+              <tr>
+                <td><strong>Focus Spirit Lens</strong></td>
+                <td>Left Trigger (LT / L2)</td>
+                <td>F or Mouse Thumb Button</td>
+                <td>Zooms camera over shoulder for fine aiming of light beams and shadow rotation.</td>
+              </tr>
+              <tr>
+                <td><strong>Dodge Roll (Langkah Elak)</strong></td>
+                <td>B Button / Circle</td>
+                <td>Spacebar or Left Alt</td>
+                <td>Fast thumb thumb-rock from camera stick to execute quick directional evasion.</td>
+              </tr>
+              <tr>
+                <td><strong>Jump / Ledge Vault</strong></td>
+                <td>A Button / Cross</td>
+                <td>Spacebar</td>
+                <td>Universal muscle memory standard for 3D platformers and action games.</td>
+              </tr>
+              <tr>
+                <td><strong>Interact / Rotate Puzzle</strong></td>
+                <td>X Button / Square (Y for Pitch)</td>
+                <td>E (Interact) / Q &amp; E (Rotate)</td>
+                <td>Context-sensitive button prompt appears only when proximate to interactable objects.</td>
+              </tr>
+              <tr>
+                <td><strong>Quick Item / Healing Herb</strong></td>
+                <td>D-Pad Up</td>
+                <td>1, 2, 3, 4 (Quick Slots)</td>
+                <td>Prevents accidental consumption during intense combat encounters.</td>
+              </tr>
+              <tr>
+                <td><strong>Pause / In-Game Journal</strong></td>
+                <td>Menu / Options Button</td>
+                <td>Escape or Tab</td>
+                <td>Brings up folklore codex, level map, and system settings instantly.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2.7: Items and Inventory System -->
+      <section class="card" id="items-inventory">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🎒</div>
+            <h2 class="card-title">2.7 Items &amp; Inventory Management System</h2>
+          </div>
+          <span class="academic-pill">Systems &amp; Economy</span>
+        </div>
+
+        <p class="lead">
+          To maintain high game flow, <em>Hikayat</em> avoids cumbersome, immersion-breaking inventory screens. The inventory is divided into a rapid-access 4-slot consumable pouch and an ancestral quest journal.
+        </p>
+
+        <div class="grid-3">
+          <!-- Item Category 1 -->
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">1. Consumables (Pouch Limit: 5)</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Pegaga Leaf Salve:</strong> Restores 40 HP instantly over 1.5 seconds.</li>
+              <li><strong>Melati Dew Water:</strong> Dispels shadow exhaustion and grants infinite sprint stamina for 15 seconds.</li>
+              <li><strong>Incense Ash:</strong> Creates a small cloud of smoke that stuns shadow beasts for 3 seconds.</li>
+            </ul>
+          </div>
+
+          <!-- Item Category 2 -->
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">2. Talismans (Equip Limit: 2)</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Pamor Kurung:</strong> Increases parry window by +0.04s, assisting players with defensive timing.</li>
+              <li><strong>Garuda's Plume:</strong> Increases jump distance by 15% and softens landing recovery latency.</li>
+              <li><strong>Eye of the Dalang:</strong> Emits subtle chime vibrations when proximate to hidden Wayang relics.</li>
+            </ul>
+          </div>
+
+          <!-- Item Category 3 -->
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">3. Quest Artifacts (Permanent)</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li><strong>Fractured Taming Sari Hilt:</strong> The ancestral spirit blade casing.</li>
+              <li><strong>Lok Shard 1 (Solar Ember):</strong> First blade wave fragment, unlocking light reflection abilities.</li>
+              <li><strong>Dalang's Bronze Bell:</strong> Acoustic key required to activate resonance water gates.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.8: User Interface (UI) Design -->
+      <section class="card" id="ui-design">
+        <div class="card-header">
+          <div class="card-title-group">
+            <div class="card-icon">🖥️</div>
+            <h2 class="card-title">2.8 User Interface (UI) &amp; HUD Architecture</h2>
+          </div>
+          <span class="academic-pill">Minimalist Diegetic HUD Mockup</span>
+        </div>
+
+        <p class="lead">
+          Our HUD embraces modern diegetic game design (inspired by <em>Ghost of Tsushima</em> and <em>Shadow of the Colossus</em>). Vitality elements fade to 20% opacity during peaceful exploration and smoothly intensify to 100% only during active combat or puzzle manipulation.
+        </p>
+
+        <!-- UI HUD Wireframe Diagram -->
+        <div class="diagram-container">
+          <img src="assets/diagrams/ui-hud-wireframe.svg" alt="Minimalist In-Game HUD Layout Mockup" style="border-radius: 8px;">
+          <p class="diagram-caption">Figure 2.3: In-game HUD layout wireframe mapped across a 16:9 viewport ratio.</p>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3>HUD Layout Elements Rationale</h3>
+            <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 1.2rem;">
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Top-Left (Vitality Core):</strong> Health indicated via a stylized blooming Lotus arc. Stamina is represented by a curved crescent meter beneath it. Keeping these in the upper periphery ensures the center screen remains uncluttered for martial combat telegraphs.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Top-Center (Cultural Compass Bar):</strong> A sleek, floating horizontal compass displaying current cardinal heading and distance in meters to active landmarks (e.g. "Temple Spire - 180m").
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Bottom-Left (Quick Consumables):</strong> Displays currently slotted herb and remaining quantity. Only appears when pressing or holding D-Pad.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong>Bottom-Right (Keris Spirit Charge):</strong> An ornate silhouette of the Keris blade that fills with molten gold energy as Arya lands parries and strikes.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>UI Color Psychology &amp; Cultural Typography</h3>
+            <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                <strong style="color: #f59e0b;">● Solar Gold (#F59E0B):</strong> Represents ancestral divinity, light power, celestial purity, and active player focus.
+              </p>
+              <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                <strong style="color: #06b6d4;">● Celestial Cyan (#06B6D4):</strong> Used for light reflection beams, puzzle alignment indicators, and spiritual energy.
+              </p>
+              <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                <strong style="color: #f43f5e;">● Corrupted Crimson (#F43F5E):</strong> Conveys shadow miasma, unblockable boss attacks, taking damage, and critical danger.
+              </p>
+              <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                <strong style="color: #10b981;">● Emerald Jade (#10B981):</strong> Represents safe zones, healing remedies, and successful puzzle resolution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.9: Transition to Week 3 -->
+      <div class="callout callout-success">
+        <h4>➡️ Transitioning into Week 3</h4>
+        <p>
+          With all core rules, operant conditioning schedules, sensory feedback systems, ergonomic controller layouts, and UI mockups finalized, we move to <strong>Week 3 (Practical 003)</strong> to design the 3D level layout of Mount Santubong, craft the tension pacing curve, balance mathematical combat tuning parameters, and plan production 3D asset budgets.
+        </p>
+        <div style="margin-top: 1rem;">
+          <a href="week3.html" class="btn btn-primary btn-sm">Proceed to Week 3: Designing the Gameplay →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>The Making of Hikayat: Echoes of the Keris</h4>
+        <p>BACS3233 Computer Game Design Assignment 1 • Tunku Abdul Rahman University of Management and Technology.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Weekly Milestones</h4>
+        <ul>
+          <li><a href="week1.html">Week 1: The Birth of Our Game</a></li>
+          <li><a href="week2.html">Week 2: How Our Game Works</a></li>
+          <li><a href="week3.html">Week 3: Designing Gameplay</a></li>
+          <li><a href="week4.html">Week 4: Improving Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Course Meta</h4>
+        <ul>
+          <li><a href="team.html">Studio Members</a></li>
+          <li><a href="evidence.html">Practical Checkpoints</a></li>
+          <li><a href="README.md">Syllabus Rubric</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Studio Dash Quack • TAR UMT FCIT</div>
+      <div>Week 2 Practical Documentation Completed</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

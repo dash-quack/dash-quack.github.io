@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pacingBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="100%" stop-color="#121826" />
+    </linearGradient>
+    <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="35%" stop-color="#f59e0b" />
+      <stop offset="85%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="880" height="440" rx="14" fill="url(#pacingBg)" stroke="#27354f" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="440" y="38" text-anchor="middle" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="20" font-weight="700">CHAPTER 1: GAMEPLAY PACING &amp; TENSION CURVE</text>
+  <text x="440" y="58" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Csikszentmihalyi Flow Theory &amp; Narrative Arc Balancing</text>
+
+  <!-- Axes -->
+  <!-- Y Axis (Tension) -->
+  <line x1="100" y1="360" x2="100" y2="90" stroke="#475569" stroke-width="2"/>
+  <text x="60" y="225" text-anchor="middle" fill="#f59e0b" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" transform="rotate(-90, 60, 225)">TENSION / INTENSITY</text>
+
+  <!-- X Axis (Time / Progression) -->
+  <line x1="100" y1="360" x2="820" y2="360" stroke="#475569" stroke-width="2"/>
+  <text x="460" y="395" text-anchor="middle" fill="#94a3b8" font-family="'Outfit', sans-serif" font-size="12" font-weight="700">MISSION TIME (ESTIMATED 25 MINUTES PLAYTHROUGH)</text>
+
+  <!-- Flow Channel Boundaries (Dashed) -->
+  <line x1="100" y1="130" x2="820" y2="130" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <text x="815" y="125" text-anchor="end" fill="#f43f5e" font-size="10">Anxiety Threshold (Frustration)</text>
+
+  <line x1="100" y1="310" x2="820" y2="310" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <text x="815" y="325" text-anchor="end" fill="#60a5fa" font-size="10">Boredom Threshold (Disengagement)</text>
+
+  <!-- Tension Curve Line -->
+  <!-- Start at Permai (340) -> Grove walk (320) -> Courtyard Ambush peak (210) -> Breather (270) -> Wayang Puzzle concentration (230) -> Boss encounter peak (145) -> Cleansing catharsis (300) -->
+  <path d="M 100 340 Q 170 330 220 280 T 320 210 Q 380 280 440 260 T 560 220 Q 640 260 700 145 Q 740 140 760 300 L 820 310" fill="none" stroke="url(#curveGradient)" stroke-width="4"/>
+
+  <!-- Key Event Markers -->
+  <!-- 1. Permai -->
+  <circle cx="100" cy="340" r="5" fill="#10b981"/>
+  <text x="110" y="325" fill="#10b981" font-size="10" font-weight="bold">Village Safe Haven</text>
+
+  <!-- 2. Courtyard Ambush -->
+  <circle cx="320" cy="210" r="5" fill="#f59e0b"/>
+  <text x="320" y="195" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="bold">Shadow Ambush (Combat)</text>
+
+  <!-- 3. Breather -->
+  <circle cx="440" cy="260" r="5" fill="#06b6d4"/>
+  <text x="440" y="280" text-anchor="middle" fill="#22d3ee" font-size="10">Refuge &amp; Lore Relic</text>
+
+  <!-- 4. Wayang Puzzle -->
+  <circle cx="560" cy="220" r="5" fill="#a855f7"/>
+  <text x="560" y="205" text-anchor="middle" fill="#c084fc" font-size="10" font-weight="bold">Light Puzzle (Intellect)</text>
+
+  <!-- 5. Boss Climax -->
+  <circle cx="700" cy="145" r="7" fill="#ef4444"/>
+  <text x="700" y="130" text-anchor="middle" fill="#f87171" font-size="11" font-weight="bold">CLIMAX: Boss Duel</text>
+
+  <!-- 6. Catharsis -->
+  <circle cx="760" cy="300" r="5" fill="#10b981"/>
+  <text x="760" y="290" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">Catharsis &amp; Cleanse</text>
+</svg>
