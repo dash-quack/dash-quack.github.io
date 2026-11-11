@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 4: Improving Our Game Design | The Making of Hikayat</title>
-  <meta name="description" content="Week 4 Game Design documentation: Peer review critiques, heuristic evaluations, before vs. after design comparisons, and final game design document synthesis.">
+  <title>Week 4: Improving Our Game Design | Ready, Frame, Shoot!</title>
+  <meta name="description" content="Week 4 Game Design documentation for Ready, Frame, Shoot!: Peer critique, iterations, before vs. after comparisons, and final review.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -12,28 +12,12 @@
 </head>
 <body>
 
-  <!-- Academic Rubric Banner -->
-  <aside class="academic-banner" aria-label="Course Academic Information">
-    <div class="academic-banner-inner">
-      <div>
-        <strong>TAR UMT</strong> • Faculty of Computing and Information Technology • <strong>BACS3233 Computer Game Design</strong>
-      </div>
-      <div class="academic-pills">
-        <span class="academic-pill">Practical: <strong>004 (Week 4)</strong></span>
-        <span class="academic-pill">Focus: <strong>Review, Improvements &amp; Final GDD</strong></span>
-        <span class="academic-pill">Assessment: <strong>CLO2 Final Synthesis</strong></span>
-      </div>
-    </div>
-  </aside>
-
   <!-- Sticky Main Navigation -->
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="brand-link">
-        <div class="brand-logo-icon">🗡️</div>
         <div class="brand-text">
-          <span class="brand-title">THE MAKING OF HIKAYAT</span>
-          <span class="brand-subtitle">Studio Dash Quack • Portfolio</span>
+          <span class="brand-title">Ready, Frame, Shoot!</span>
         </div>
       </a>
 
@@ -43,9 +27,6 @@
         <ul class="nav-menu">
           <li class="nav-item"><a href="index.html" class="nav-link">Overview</a></li>
           <li class="nav-item"><a href="week1.html" class="nav-link">Week 1 <span class="nav-badge-pill">Birth</span></a></li>
-          <li class="nav-item"><a href="week2.html" class="nav-link">Week 2 <span class="nav-badge-pill">Mechanics</span></a></li>
-          <li class="nav-item"><a href="week3.html" class="nav-link">Week 3 <span class="nav-badge-pill">Gameplay</span></a></li>
-          <li class="nav-item"><a href="week4.html" class="nav-link active">Week 4 <span class="nav-badge-pill">Refinement</span></a></li>
           <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
           <li class="nav-item"><a href="evidence.html" class="nav-link">Evidence Log</a></li>
         </ul>
@@ -60,281 +41,32 @@
         <span class="page-week-indicator">Week 4 • Practical 004 Focus</span>
         <h1 class="page-title">Improving Our Game Design</h1>
         <p class="page-description">
-          Reviewing, evaluating, and elevating our design through peer feedback, heuristic analysis, and iterative refinement. Demonstrating what changed, how it changed, and why it improved player engagement and accessibility.
+          Scheduled practical session documentation: Peer critique, heuristic evaluation, iterative before/after refinements, and final design synthesis.
         </p>
       </div>
     </section>
 
     <div class="container">
-
-      <!-- Week 4 Focus Callout -->
-      <div class="callout callout-info">
-        <h4>🎯 Practical 004 Core Requirement: The "Show, How, and Why" of Iteration</h4>
-        <p>
-          As highlighted in Section 2 of the Assignment Brief: <em>"Use before/after comparisons to SHOW what your group designed, HOW you designed it, and WHY it changed."</em> This page synthesizes the evidence of our evolution across all four weeks.
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 class="card-title">Week 4 Milestone (Work in Progress)</h2>
+          </div>
+          <span class="academic-pill">Practical 004</span>
+        </div>
+        <p class="lead">
+          This section will document the peer reviews, iterative refinements, and final GDD consolidation for <em>Ready, Frame, Shoot!</em> during Practical 004.
         </p>
+        <ul style="color: var(--text-secondary); padding-left: 1.25rem;">
+          <li>Heuristic evaluation and peer testing feedback on camera controls and readability.</li>
+          <li>Side-by-side Before/After comparisons of viewfinder UI and scoring tolerances.</li>
+          <li>Executive Game Design Document (GDD) synthesis for 3D Game Programming.</li>
+          <li>Final digital portfolio submission audit.</li>
+        </ul>
+        <div style="margin-top: 1.5rem;">
+          <a href="week1.html" class="btn btn-primary btn-sm">← View Week 1: The Birth of Our Game</a>
+        </div>
       </div>
-
-      <!-- Section 4.1: Design Review & Critique Process -->
-      <section class="card" id="design-review">
-        <div class="card-header">
-          <div class="card-title-group">
-            <div class="card-icon">🔍</div>
-            <h2 class="card-title">4.1 Design Review &amp; Critique Methodology</h2>
-          </div>
-          <span class="academic-pill">Peer &amp; Tutor Review</span>
-        </div>
-
-        <p class="lead">
-          During Practical 004, Studio Dash Quack conducted formal design reviews incorporating tutor checkpoint consultations, peer studio critique, and a structured Game Usability Heuristic Evaluation.
-        </p>
-
-        <div class="grid-3">
-          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-            <h4 style="color: var(--accent-gold-light); margin-top: 0;">1. Practical Checkpoint Feedback</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              <strong>Lecturer Note:</strong> "The cultural Wayang shadow concept is outstanding and original. However, ensure that the 3D control schemes do not feel overloaded with simultaneous modifier buttons, and verify that the level layout provides distinct sightlines so the player doesn't feel disoriented in dense jungle areas."
-            </p>
-          </div>
-
-          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-            <h4 style="color: var(--accent-teal); margin-top: 0;">2. Peer Studio Critique</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              <strong>Feedback from Studio Wayang Tech:</strong> "During the mock combat walkthrough, the 0.10s parry timing was described as 'punishingly unforgiving like a hardcore competitive fighter.' The shadow puzzle was also frustrating because there was no feedback indicating whether you were close to the solution."
-            </p>
-          </div>
-
-          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-            <h4 style="color: var(--accent-emerald); margin-top: 0;">3. Game Usability Heuristics</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              <strong>Findings (Nielsen &amp; Desurvire):</strong> The initial HUD suffered from high visual clutter and occlusion of combat animations. Minimap drew player attention away from the 3D environment, violating diegetic immersion principles.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4.2: Major Before vs. After Iterations -->
-      <section class="card" id="before-after">
-        <div class="card-header">
-          <div class="card-title-group">
-            <div class="card-icon">🔄</div>
-            <h2 class="card-title">4.2 Before vs. After Design Comparison Showcase</h2>
-          </div>
-          <span class="academic-pill">Core Iteration Evidence</span>
-        </div>
-
-        <p class="lead">
-          Below are the four fundamental design breakthroughs achieved between our Week 2/3 prototypes and our final Week 4 specifications:
-        </p>
-
-        <!-- Visual Before/After Diagram -->
-        <div class="diagram-container">
-          <img src="assets/diagrams/before-after-hud.svg" alt="Before vs After HUD and Combat Comparison" style="border-radius: 8px;">
-          <p class="diagram-caption">Figure 4.1: Direct comparative analysis of the HUD and feedback iteration between Week 2 and Week 4.</p>
-        </div>
-
-        <!-- Iteration 1 -->
-        <div class="comparison-container">
-          <div class="comparison-card before">
-            <span class="comparison-badge badge-before">Week 2 Initial Design</span>
-            <h4>Iteration 1: Combat Parry Window &amp; Telegraphing</h4>
-            <ul>
-              <li><strong>Parry Timing Window:</strong> Strict 0.10 seconds (6 frames @ 60 FPS).</li>
-              <li><strong>Telegraphing Cue:</strong> Generic white slash line on enemy model.</li>
-              <li><strong>Failed Parry Penalty:</strong> Player takes 100% full unmitigated damage and suffers heavy stagger.</li>
-              <li><strong>Playtester Result:</strong> 72% failure rate; players avoided parrying altogether and resorted to repetitive roll-spamming.</li>
-            </ul>
-          </div>
-
-          <div class="comparison-card after">
-            <span class="comparison-badge badge-after">Week 4 Refined Final Design</span>
-            <h4>Refined: Dynamic Parry Window &amp; Harmonic Cues</h4>
-            <ul>
-              <li><strong>Parry Timing Window:</strong> Tuned to <strong>0.18 seconds (11 frames @ 60 FPS)</strong>.</li>
-              <li><strong>Telegraphing Cue:</strong> Glinting golden spark on blade tip + distinct metallic weapon whistle 0.4s before impact.</li>
-              <li><strong>Partial Success Grace:</strong> Early guards block 75% damage and cost stamina rather than health.</li>
-              <li><strong>Playtester Result:</strong> 84% engagement with parry mechanics; satisfaction score increased from 2.6/5 to 4.7/5!</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Iteration 2 -->
-        <div class="comparison-container">
-          <div class="comparison-card before">
-            <span class="comparison-badge badge-before">Week 3 Initial Design</span>
-            <h4>Iteration 2: 3D Spatial Navigation &amp; Landmark Sightlines</h4>
-            <ul>
-              <li><strong>Layout:</strong> Uniform 4-way symmetrical ruins surrounded by dense, repetitive jungle foliage.</li>
-              <li><strong>Landmark Sightline:</strong> Mount Santubong Spire was obscured by high canopy trees.</li>
-              <li><strong>Player Experience:</strong> Playtesters frequently ran in reverse loops, mistaking cleared areas for undiscovered paths.</li>
-            </ul>
-          </div>
-
-          <div class="comparison-card after">
-            <span class="comparison-badge badge-after">Week 4 Refined Final Design</span>
-            <h4>Refined: Visual Breadcrumbs &amp; Architectural Framing</h4>
-            <ul>
-              <li><strong>Layout:</strong> Elevated the Golden Spire by +15m; carved wide celestial light shafts through the canopy framing the tower.</li>
-              <li><strong>Breadcrumbs:</strong> Placed distinct <em>Sang Kelembai</em> petrified warrior statues at every key intersection.</li>
-              <li><strong>Player Experience:</strong> Navigation disorientation dropped by 68%; player flow through Chapter 1 felt natural and cinematic.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Iteration 3 -->
-        <div class="comparison-container">
-          <div class="comparison-card before">
-            <span class="comparison-badge badge-before">Week 2 Initial Design</span>
-            <h4>Iteration 3: HUD Clutter &amp; Diegetic Immersion</h4>
-            <ul>
-              <li><strong>Vitality UI:</strong> Opaque, bright red rectangular health bar anchored across the screen center.</li>
-              <li><strong>Navigation UI:</strong> Clunky, circular static mini-map covering the bottom-right corner.</li>
-              <li><strong>Notification Popups:</strong> Large text boxes paused combat gameplay during item pickup.</li>
-            </ul>
-          </div>
-
-          <div class="comparison-card after">
-            <span class="comparison-badge badge-after">Week 4 Refined Final Design</span>
-            <h4>Refined: Contextual Diegetic Lotus &amp; Compass Bar</h4>
-            <ul>
-              <li><strong>Vitality UI:</strong> Elegant blooming Lotus arc in the top-left with contextual auto-dimming (20% opacity outside combat).</li>
-              <li><strong>Navigation UI:</strong> Replaced mini-map with a minimalist floating horizontal compass bar at top-center.</li>
-              <li><strong>Notifications:</strong> Subtle bottom-left toast icons that animate non-intrusively without pausing input.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Iteration 4 -->
-        <div class="comparison-container">
-          <div class="comparison-card before">
-            <span class="comparison-badge badge-before">Week 2 Initial Design</span>
-            <h4>Iteration 4: Wayang Shadow Alignment Accessibility</h4>
-            <ul>
-              <li><strong>Rotation Tolerance:</strong> Demanded precision alignment within an exact ±1.5° angular margin.</li>
-              <li><strong>Proximity Feedback:</strong> Zero feedback until the player achieved the exact 100% match.</li>
-              <li><strong>Player Experience:</strong> Players felt trapped in tedious pixel-hunting guesswork, leading to trial-and-error frustration.</li>
-            </ul>
-          </div>
-
-          <div class="comparison-card after">
-            <span class="comparison-badge badge-after">Week 4 Refined Final Design</span>
-            <h4>Refined: Multi-Sensory Proximity Harmonic Guidance</h4>
-            <ul>
-              <li><strong>Rotation Tolerance:</strong> Widened acceptable threshold to a comfortable <strong>±5.0°</strong>.</li>
-              <li><strong>Proximity Feedback:</strong> Controller vibrates with rhythmic pulses, and an ethereal gamelan overtone rises in harmonic pitch when within 10°.</li>
-              <li><strong>Player Experience:</strong> Players solved the puzzle intuitively through sensory feedback, triggering an authentic "Eureka!" delight.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4.3: Master Evolution Table -->
-      <section class="card" id="evolution-matrix">
-        <div class="card-header">
-          <div class="card-title-group">
-            <div class="card-icon">📊</div>
-            <h2 class="card-title">4.3 Summary Matrix of Design Evolution Across Weeks 1 to 4</h2>
-          </div>
-          <span class="academic-pill">Development Synthesis</span>
-        </div>
-
-        <p class="lead">
-          A holistic overview capturing how our original concept matured through four weekly development cycles:
-        </p>
-
-        <div class="table-responsive">
-          <table>
-            <thead>
-              <tr>
-                <th>Design Dimension</th>
-                <th>Week 1: Concept Origin</th>
-                <th>Week 2 &amp; 3: Initial Specification</th>
-                <th>Week 4: Final Refined Solution</th>
-                <th>Primary Design Justification</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Game Theme &amp; Premise</strong></td>
-                <td>Explored flight simulator (Wau) and 2D shadow platformer.</td>
-                <td>Converged on 3D cultural action-adventure with Keris spirit blade.</td>
-                <td>Added <em>Puteri Santubong</em> and <em>Sang Kelembai</em> folklore lore integration.</td>
-                <td>Elevates narrative depth and educational authenticity for TAR UMT curriculum.</td>
-              </tr>
-              <tr>
-                <td><strong>Combat System</strong></td>
-                <td>Basic slash and jump attacks.</td>
-                <td>Standard light/heavy melee with strict 0.10s parry.</td>
-                <td>Rhythmic Silat stance system, tuned 0.18s parry, and celestial blade charge.</td>
-                <td>Balancing high skill ceiling with responsive accessibility.</td>
-              </tr>
-              <tr>
-                <td><strong>Control Scheme</strong></td>
-                <td>Face-button combat on gamepad (X &amp; Y).</td>
-                <td>Moved attacks to shoulder bumpers (RB/RT).</td>
-                <td>Finalized dual-input parity with ergonomic trigger resistance and mouse wheel zoom.</td>
-                <td>Allows full simultaneous camera control while executing martial strikes.</td>
-              </tr>
-              <tr>
-                <td><strong>Level Architecture</strong></td>
-                <td>Generic ancient ruin sketch.</td>
-                <td>4-zone linear sequence with heavy tree density.</td>
-                <td>Open hub-and-spoke blueprint with towering Weenie sightline and optional lore crypt.</td>
-                <td>Enhances player agency and rewards curious environmental exploration.</td>
-              </tr>
-              <tr>
-                <td><strong>User Interface (UI)</strong></td>
-                <td>Standard fantasy HUD with solid borders.</td>
-                <td>Health bars and circular radar minimap.</td>
-                <td>Minimalist diegetic Lotus HUD with contextual opacity and floating compass.</td>
-                <td>Minimizes cognitive friction and eliminates immersion-breaking screen clutter.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Section 4.4: Final GDD Executive Summary -->
-      <section class="card" id="final-gdd">
-        <div class="card-header">
-          <div class="card-title-group">
-            <div class="card-icon">📑</div>
-            <h2 class="card-title">4.4 Final Game Design Document (GDD) Synthesis</h2>
-          </div>
-          <span class="academic-pill">Ready for 3D Game Programming</span>
-        </div>
-
-        <p class="lead">
-          Having completed our four-week digital design journal, <strong>The Making of Hikayat: Echoes of the Keris</strong> stands as a fully formulated, rigorously balanced 3D game design ready for implementation in the subsequent 3D Game Programming course.
-        </p>
-
-        <div class="concept-card" style="margin-top: 1.5rem;">
-          <h3 style="color: var(--accent-gold-light); margin-top: 0;">Final Production Specifications Summary</h3>
-          <div class="grid-2">
-            <div>
-              <p><strong>Title:</strong> Hikayat: Echoes of the Keris</p>
-              <p><strong>Genre:</strong> 3D Cultural Action-Adventure &amp; Environmental Puzzle</p>
-              <p><strong>Target Engine:</strong> Unity 2022+ / 2026 LTS (Universal Render Pipeline - URP)</p>
-              <p><strong>Target Platform:</strong> PC (Steam / Windows 10/11) with Full Controller Support</p>
-            </div>
-            <div>
-              <p><strong>Pacing Duration:</strong> 25-30 minutes for Chapter 1 Vertical Slice</p>
-              <p><strong>Input Scheme:</strong> Xbox / DualShock Gamepad + Keyboard &amp; Mouse</p>
-              <p><strong>Target Frame Rate:</strong> 60 FPS locked @ 1080p</p>
-              <p><strong>Course Outcome Assessed:</strong> CLO2 (Interaction, Controls, Flow &amp; Tuning)</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Submission Confirmation Callout -->
-      <div class="callout callout-gold">
-        <h4>🏁 Final Portfolio Submission Ready</h4>
-        <p>
-          This concludes our 4-week digital development journal for Assignment 1. Review our complete group contribution breakdown on the <a href="team.html" style="font-weight: bold; text-decoration: underline;">Team &amp; Contributions Page</a> and inspect our dated weekly meeting logs on the <a href="evidence.html" style="font-weight: bold; text-decoration: underline;">Evidence Log Page</a>.
-        </p>
-      </div>
-
     </div>
   </main>
 
@@ -342,34 +74,34 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-col">
-        <h4>The Making of Hikayat: Echoes of the Keris</h4>
-        <p>BACS3233 Computer Game Design Assignment 1 • Tunku Abdul Rahman University of Management and Technology.</p>
+        <h4>The Making of Ready, Frame, Shoot!</h4>
+        <p>A Game Design Digital Portfolio for BACS3233 Computer Game Design
+          Coursework Assignment 1 at Tunku Abdul Rahman University of Management and Technology (TAR UMT).</p>
       </div>
+
       <div class="footer-col">
-        <h4>Weekly Milestones</h4>
+        <h4>Journal Sections</h4>
         <ul>
+          <li><a href="index.html">Overview &amp; Concept</a></li>
           <li><a href="week1.html">Week 1: The Birth of Our Game</a></li>
-          <li><a href="week2.html">Week 2: How Our Game Works</a></li>
-          <li><a href="week3.html">Week 3: Designing Gameplay</a></li>
-          <li><a href="week4.html">Week 4: Improving Design</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h4>Course Meta</h4>
+        <h4>Documentation &amp; Team</h4>
         <ul>
-          <li><a href="team.html">Studio Members</a></li>
-          <li><a href="evidence.html">Practical Checkpoints</a></li>
-          <li><a href="README.md">Syllabus Rubric</a></li>
+          <li><a href="team.html">Team Members</a></li>
+          <li><a href="evidence.html">Meeting &amp; Evidence Log</a></li>
+          <li><a href="README.md" target="_blank">Assignment Brief</a></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <div>© 2026 Studio Dash Quack • TAR UMT FCIT</div>
-      <div>Week 4 Final Improvements Completed</div>
+      <div>Hosted on GitHub Pages</div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
 </html>
-

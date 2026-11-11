@@ -60,10 +60,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Intercept and prevent clicks on disabled elements
+  document.addEventListener('click', (e) => {
+    const disabledTarget = e.target.closest('.disabled, [aria-disabled="true"]');
+    if (disabledTarget) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
+
   // Active Nav Link highlighting based on current page path
   const currentPath = window.location.pathname;
   const pageName = currentPath.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach((link) => {
+    if (link.classList.contains('disabled')) return;
     const linkHref = link.getAttribute('href');
     if (linkHref === pageName || (pageName === '' && linkHref === 'index.html')) {
       link.classList.add('active');

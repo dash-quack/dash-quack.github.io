@@ -1,0 +1,20 @@
+Game Title : Ready, Frame, Shoot!
+Game Genre: Educational
+Game Objective : 
+To teach basic photography composition techniques using a game.
+Game Mechanics (3~4 features) : 
+Camera view adjustment. Freely adjusting the game’s lighting setting via controlling a camera (ISO, Aperture, Shutter Speed), to snap photos of the landscape in a desired condition. (Main objective / win condition for the game)
+Objective: To capture/document outdoor sceneries.
+Challenge: First few objectives are handheld with tips to exact setting number, further down its up to the player to capture the perfect photo.
+Representation. The player walks in a photorealistic outdoor terrain filled with trees; grass, and flowers built using the Unity native terrain tools. The ambience consists of nature sounds like birds chirping; bugs buzzing; wind blowing.
+Rules: Camera settings, Area restrictions, Rules for scoring high on a photo.
+Feedback. 
+Emotional: Satisfaction of accomplishment. (Can be enforced by having a progress tracker of objectives completed)
+Physical: Audio feedback when snapping a photo, footstep noise when walking on the grass/dirt path. NPC speech sound effects when spoken to.
+Interaction : The player navigates the area and uses the camera tool to capture photos. The player can also interact with the camera tool to adjust camera settings or change camera equipment.
+
+NPC Dialogues/Side Quests. NPCs around the map provide side quest objectives to be completed by taking photos of their desired locations/objects in specific camera settings. (Optional objective to be completed)
+Example: Low-poly NPC character called Andrew sitting at a shack asking you to take a photo of a pond for him. 
+Captured photos will be graded and calculated based on the player’s position, camera settings, angle, to determine their score. This is the winning condition of the game. (System)
+Non objective photos (or photos out of focus zones) will not be graded. Players are allowed to freely capture scenic photos and keep the screenshots as they’d like.
+Photos are graded based on camera settings (ISO, Aperture, Shutterspeed) (Optionally: framing; timing; distance)
