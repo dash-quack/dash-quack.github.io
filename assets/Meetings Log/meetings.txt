@@ -1,0 +1,254 @@
+Meeting Minutes/Records 1
+1) Meeting Details
+Date : 6/11/2026 (Thursday)
+Time : 4.00pm - 6.00pm (2 hours)
+Mode of Meeting (Online/Physical) : Physical
+Location : B001H          
+Attendees : Josh Leong Wing Seong, Tan Owen, Wam Wei Kang
+Attendance : All present
+
+2) Agenda
+Discussion of Game Ideas
+Explanation of Game Idea 1
+Explanation of Game Idea 2
+Feedbacks of Game Ideas
+Task Assignments
+
+3) Meeting Minutes/Records
+Discussion of game ideas
+Prior to the meeting, Tan Owen and Josh Leong Wing Seong had proposed game idea 1 & 2. The team decided to discuss the general gameplay concept of each idea and proposed to Ms.Safinaz for further discussion and feedback.
+
+No
+Game Idea
+Proposed by
+1
+educational game where players are taught to manually adjust camera settings (ISO, aperture, shutter speed, etc) 
+Tan Owen
+2
+culture / educational game where players are taught to adjust their housing/room to match fengshui etiquettes 
+Josh Leong Wing Seong
+
+Table 1.1 Game ideas proposed prior to meeting
+Refer to Game Idea Draft for further details.
+
+
+Explanation of Game Idea 1
+Tan Owen has provided his explanations of the general gameplay of game idea 1 as the following:
+
+The game shall be educating players on photography skills. Players will be placed in levels of certain areas with fixed lighting, with the goal to capture photos with the appropriate camera settings and composition.
+To do so, the player can adjust the camera settings and manage photography compositions.
+
+Explanation of Game Idea 2
+Josh Leong Wing Seong has provided his explanations of the general gameplay of game idea 2 as the following:
+
+The game shall revolve around the Chinese interior Feng Shui culture. Players will be placed into levels resembling a fully furnished house interior, with the goal to spot violations of interiors according to the interior Feng Shui rules, and suggest the most appropriate adjustments to the spot. 
+To do so, the player can explore within the housing and be given options to make adjustments by selecting certain furniture. 
+
+Feedback of Game Ideas
+
+After proposing both game ideas to Ms.Safinaz, she has made the following feedback suggestions.
+
+Game Idea No.
+Feedback
+1
+There maybe technical challenges regarding the evaluation of the tasks (camera settings and composition)
+Implementing these features 
+2
+Research scope of interior Feng Shui maybe too big
+Concepts to implement maybe too vague for the team to implement as features
+
+
+Tan Owen has given a similar feedback of Game Idea 2 that the concepts require further specifications to prevent complications.
+
+
+
+Task Assignment
+The following tasks has been identified by Josh Leong Wing Seong and confirmed by team members with deadline dates given : 
+
+No.
+Tasks
+Member
+Deadline
+1.
+Update Website
+Owen
+8 Nov
+2.
+Meeting Records of today (5th November 4 - 6)
+Josh
+6 Nov
+3.
+Reference for game idea 2 (Feng Shui)
+Josh
+8 Nov
+4.
+Reference for game idea 1-3
+Wei Kang
+8 Nov
+
+Table 1.2 Task assignment as of 5 November
+
+Finalizing game ideas will be postponed as there are lesser materials supporting game idea 2 and 3, and the team deemed it preferable to evaluate the ideas once their completeness is more satisfactory. The team exchanged their opinions on accepting each other’s game idea and reached consensus on willing to contribute to development and necessary work regardless of whose game ideas are accepted.
+
+Meeting Minutes/Records 2
+1) Meeting Details
+Date : 10/11/2026 (Tuesday)
+Time : 1.00pm - 2.30pm (1.5 hours)
+Mode of Meeting (Online/Physical) : Physical
+Location : B001H          
+Attendees : Josh Leong Wing Seong, Tan Owen, Wam Wei Kang
+Attendance : All present
+
+2) Agenda
+ Discussion of New Ideas
+Equipment slots
+FPS POV Hand Implementation
+ Task Assignments
+
+3) Meeting Minutes/Records
+Discussion of game ideas
+	During the meeting, Wam Wei Kang has proposed two ideas that could be implemented into the game to expand the game’s features and enhance the player’s immersive experience.
+
+Equipment slots
+	The idea is that the GUI of the main gameplay screen will contain a toolbar that shows the camera equipment and the currently equipped ones.
+
+Figure 1.1 Example of toolbars in Lucid Block
+	
+	This is a functionality-based feature that helps players navigate through various equipment quickly without breaking the flow of perfecting the photography. The toolbar will be placed at the bottom of the screen, the fashion similarly to the demonstrated in Figure 1.1.
+
+	The idea suggests camera equipment features such as tripods and different varieties of lenses, to provide more options for players to take their perfect idea of photography or to complete the tasks. However, it is identified that the implementation is optional due to short deadlines and heavy workload, the team deemed it wise to hold off implementing the idea and advised to revise at later stages.
+
+FPS POV Hand Implementation
+An idea proposed by Wam Wei Kang that during the gameplay, players could see their “hand” and their actions trigger animations of the hand model to suggest their player character has truly moved and carried out the action. The visualization of the idea can be seen on Figure 1.1 as an example. 
+The team decides that it is an interesting idea that enhances the player’s immersive experience, which could be one of the attractions of the game. Since the implementation of the feature is rather small and simple in scale, the team agrees to implement the idea when the game begins development and Wei Kang has volunteered to be the responsible programmer for this.
+The source of the hand model and its animation will be filmed by our team, with Tan Owen being responsible for filming and being the subject of film.
+
+
+Task Assignment
+The following tasks has been identified by Wam Wei Kang and confirmed by team members: 
+
+No.
+Tasks
+Member
+Deadline
+1.
+Provide Hand Model frames/clip
+Owen
+-
+2.
+Meeting Records of today (5th November 4 - 6)
+Josh
+11 Nov
+3.
+Implementation of hand model
+Wei Kang
+-
+
+Table 1.1 Task assignment as of 11 November
+
+Refer to FPS POV Hand photographs of Game Idea Draft for requirement details on hand model frames/clips.
+The deadlines for Task 1 and 3 are to be announced once the game has entered development stages, as of now, this serves documentation purposes to prevent unfinished tasks.
+
+Meeting Minutes/Records 3
+1) Meeting Details
+Date : 19/11/2026 (Thursday)
+Time : 4.00pm - 6.00pm (2 hours)
+Mode of Meeting (Online/Physical) : Physical
+Location : B001H          
+Attendees : Josh Leong Wing Seong, Tan Owen, Wam Wei Kang
+Attendance : All present
+
+2) Agenda
+Unity Version for development phase
+Task allocation
+System development
+Level design
+Setting UI design
+Others
+
+3) Meeting Record
+Unity Version for development phase
+Proposed by Wam Wei Kang, it is agreed by all members to develop Ready, Frame, Shoot! on Unity version 6.9, the latest version as of 19 November 2026.
+
+Task Allocations
+System Development
+The following task assignments are to be assigned to their respective team members and to be implemented fully by week 6 of the practical assessment.
+
+Team Member
+Tasks
+Description Brief
+Josh
+Quest System
+Provide a reusable and modular script that handles the logic behind quest assignments, objective tracking, quest UI
+Wei Kang
+View Model
+handles the camera toggle between TPS and FPS
+Owen
+Event and NPC integration
+connects the game event scripts to NPC to achieve certain requirements to build certain levels
+
+Table 3.1 Task Assignment on System Development
+
+Level Design
+	It is agreed upon that the game will span over 3 levels, each authorized by one team member in terms of design.  Each game level will involve a theme that should challenge the player to adapt to different camera settings on different scenes.
+
+Team Member
+Level Theme
+Josh
+Raining outdoors
+Wei Kang
+Low-light indoors
+Owen
+Urban + nature outdoor
+
+Table 3.2 Task assignments of Level Design in Ready, Frame, Shoot!
+
+In addition, it is proposed that Owen’s level will be the main tutorial level for the players.
+
+Setting UI Design
+Proposed by Tan Owen, the game settings UI menu, where players can adjust graphic or control settings, will be required to be assigned to any team members as a task. The specific assignments will be made at later stages dependent on the member’s workload.
+
+Others
+The following addition has been made to Week 2 Content as a result of discussion during this period of time. It is agreed by all members to implement these changes into the game.
+
+Changes
+Description Brief
+Camera shake
+Upon shooting a picture, a slight shake of the camera is simulated according to real life cases
+Hold breath mechanic
+An action that players can take to negate the camera shake to ensure a more stable photo to be taken. 
+
+Table 3.3 Additional Content to Week 2 Content
+
+
+It is not finalized on what control schemes should be assigned to the “hold breath” mechanic, two suggestions were given and concerns were raised.
+
+Control schemes
+Advantages
+Disadvantages
+Hold
+More realistic experience, befitting with the educational objective
+Adds on mental burden on the player during gameplay
+Toggle
+Less stressful on player actions, smoother gameplay experience
+Less realism on photography
+
+Table 3.4 Analysis on two suggestions of control scheme for the new mechanic
+
+The finalized conclusion is decided to be made in later stages of the development, where control schemes are to be implemented and finalized for submission.
+
+
+Meeting 3
+version decided to be on 6.9
+terrain reference
+
+Meeting 4
+task allocation
+Josh - quest system -reusable and modular, including NPC assigning quests -  raining level design (bokeh + background noise complementing)
+wk - View model -NPC related work -FPS and TPS camera view toggle -low-light indoors level design (visibility of subject at low light)
+Owen - integrating events with NPCs - urban + nature outdoor design (visibility of subject under motion) - tutorial level design 
+
+setting UI design - wk or josh
+
+TPS concerns - NPC animation state switching
+mechanic focus - ISO aperture shutter speed

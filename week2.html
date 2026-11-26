@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week 2: How Our Game Works | Ready, Frame, Shoot!</title>
-  <meta name="description" content="Week 2 Game Design documentation for Ready, Frame, Shoot!: Rules, mechanics, controls, feedback, and UI.">
+  <meta name="description"
+    content="Week 2 Game Design documentation for Ready, Frame, Shoot!: Game rules, gameplay mechanics, player interaction, control scheme, UI wireframes, and audio-visual feedback.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- Sticky Main Navigation -->
@@ -26,8 +31,12 @@
       <nav>
         <ul class="nav-menu">
           <li class="nav-item"><a href="index.html" class="nav-link">Overview</a></li>
-          <li class="nav-item"><a href="week1.html" class="nav-link">Week 1 <span class="nav-badge-pill">Birth</span></a></li>
-          <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="week1.html" class="nav-link">Week 1 <span
+                class="nav-badge-pill">Birth</span></a></li>
+          <li class="nav-item"><a href="week2.html" class="nav-link active">Week 2 <span
+                class="nav-badge-pill">Mechanics</span></a></li>
+          <li class="nav-item"><a href="meetings-log.html" class="nav-link">Meetings Log</a></li>
+          <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true" tabindex="-1">Team (WIP)</a></li>
           <li class="nav-item"><a href="evidence.html" class="nav-link">Evidence Log</a></li>
         </ul>
       </nav>
@@ -38,35 +47,379 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="page-header-inner">
-        <span class="page-week-indicator">Week 2 • Practical 002 Focus</span>
+        <span class="page-week-indicator">Week 2 • Practical 2 Focus</span>
         <h1 class="page-title">How Our Game Works</h1>
         <p class="page-description">
-          Scheduled practical session documentation: Camera view controls, photo grading mechanics, operant conditioning feedback, and photography UI.
+          Game rules, gameplay mechanics, player interaction, control scheme, UI wireframes, feedback systems, and
+          initial audio-visual design for Ready, Frame, Shoot!.
         </p>
       </div>
     </section>
 
     <div class="container">
-      <div class="card">
+
+      <!-- Content 1: Game Rules & Gameplay Mechanics -->
+      <section class="card" id="rules-mechanics">
         <div class="card-header">
           <div class="card-title-group">
-            <h2 class="card-title">Week 2 Milestone (Work in Progress)</h2>
+            <h2 class="card-title">2.1 Game Rules &amp; Gameplay Mechanics</h2>
           </div>
-          <span class="academic-pill">Practical 002</span>
+          <span class="academic-pill">Content 1</span>
         </div>
-        <p class="lead">
-          This section will document the detailed mechanics and interface systems for <em>Ready, Frame, Shoot!</em> during Practical 002.
-        </p>
-        <ul style="color: var(--text-secondary); padding-left: 1.25rem;">
-          <li>Detailed camera control mapping (ISO, Aperture, Shutter Speed dial inputs).</li>
-          <li>Reinforcement schedules and feedback loops for photo evaluation.</li>
-          <li>NPC dialogue tree and side quest assignment systems.</li>
-          <li>In-game HUD wireframes (viewfinder, light meter, settings overlay).</li>
-        </ul>
-        <div style="margin-top: 1.5rem;">
-          <a href="week1.html" class="btn btn-primary btn-sm">← View Week 1: The Birth of Our Game</a>
+
+        <h3>Game Setting, Player Role &amp; Objectives</h3>
+        <div class="grid-2">
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Setting, Roles &amp; Objectives</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li><strong>Game Setting:</strong> Several scenic locations (e.g., Amanohashidate, Kyoto).</li>
+              <li><strong>Player Character:</strong> A beginner in photography.</li>
+              <li><strong>Character Roles:</strong> NPC gives out photo requests.</li>
+              <li><strong>Player Objectives:</strong> Capture photos of requested objects.</li>
+            </ul>
+
+            <h4 style="color: var(--accent-teal); margin-top: 1.25rem;">Asset Dump</h4>
+            <ul style="font-size: 0.85rem; padding-left: 1.25rem; color: var(--text-secondary); word-break: break-all;">
+              <li><a href="https://yumeforge.itch.io/japanese-rural-village" target="_blank" rel="noopener">Japanese
+                  Rural Village (itch.io)</a></li>
+              <li><a href="https://rg-poly.itch.io/stylized-asia-enviroment-megapack-unity-urp" target="_blank"
+                  rel="noopener">Stylized Asia Environment Megapack Unity URP (itch.io)</a></li>
+              <li><a
+                  href="https://www.cgtrader.com/search?keywords=tokyo-city&licenses[]=exclude_ai_generated&licenses[]=exclude_3d_print&price[from]=0&price[to]=0"
+                  target="_blank" rel="noopener">Tokyo City Free 3D Models (CGTrader)</a></li>
+              <li><a
+                  href="https://www.cgtrader.com/search?keywords=japan&licenses%5B%5D=exclude_ai_generated&licenses%5B%5D=exclude_3d_print&price[from]=0&price[to]=0"
+                  target="_blank" rel="noopener">Japan Free 3D Models (CGTrader)</a></li>
+            </ul>
+          </div>
+
+          <div class="diagram-container" style="margin: 0;">
+            <img src="assets/Week2/Screenshot 2026-11-26 143235.png"
+              alt="Amanohashidate, Kyoto scenic location reference"
+              style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+            <p class="diagram-caption"><strong>Figure 2.1:</strong> Scenic location reference — Amanohashidate, Kyoto.
+            </p>
+          </div>
         </div>
-      </div>
+
+        <div class="grid-2" style="margin-top: 1.5rem;">
+          <!-- Game Rules -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">Game Rules</h3>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>The player cannot run out of bounds.</li>
+              <li>The player can only take pictures in designated areas.</li>
+              <li>The player will be rewarded with points/in-game currency to upgrade their camera equipment (optional).
+              </li>
+              <li>The player will lose/fail if they fail to hit a passing grade set by the level.</li>
+              <li>The player will be able to retry any level.</li>
+            </ul>
+          </div>
+
+          <!-- Gameplay Mechanics -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="margin-top: 0;">Gameplay Mechanics</h3>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li><strong>Movement:</strong> Run, Jump, Crouch, Prone, Walk.</li>
+              <li><strong>Progression:</strong> Getting a passing grade for completing a quest.</li>
+              <li><strong>Camera Stabilization:</strong> Press a key to hold breath and prevent shaking; a stamina bar
+                dictates how long the player can hold their breath.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 1.5rem;">
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Interaction &amp; Photo Grading</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>The player talks to the NPC to receive a quest.</li>
+              <li>The player finds the designated photo area to take the requested photo.</li>
+              <li>Photos are graded on simple composition and exposure set by the exposure triangle (ISO, Shutter Speed,
+                Aperture).</li>
+              <li>Composition is determined by how many objects are captured in frame and how far the center of the
+                frame is from the "ideal" framing, teaching the exposure triangle and basic composition.</li>
+            </ul>
+          </div>
+
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Puzzle Mechanics</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Adjust camera settings (ISO, Aperture, and Shutter Speed) to achieve a better exposed shot for a
+                higher
+                score.</li>
+              <li>Figure out which lens or lighting equipment to use to capture a better picture.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content 2: Player Interaction & Control Scheme -->
+      <section class="card" id="interaction-controls">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 class="card-title">2.2 Player Interaction &amp; Control Scheme</h2>
+          </div>
+          <span class="academic-pill">Content 2</span>
+        </div>
+
+        <h3>Player Interaction &amp; References</h3>
+        <div class="grid-3">
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">[Interact] Key Prompts</h4>
+            <ul style="font-size: 0.88rem; padding-left: 1.2rem; color: var(--text-secondary);">
+              <li>Interact with items/objects by pressing the <code>[interact]</code> key.</li>
+              <li>Interact with NPCs by pressing the <code>[interact]</code> key.</li>
+              <li>Use/collect items by pressing the <code>[interact]</code> key.</li>
+            </ul>
+            <div class="diagram-container" style="margin: 0.75rem 0 0 0; padding: 0.75rem;">
+              <img src="assets/Week2/Screenshot 2026-11-26 143250.png" alt="COD Advanced Warfare interact key reference"
+                style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+              <p class="diagram-caption"><strong>Figure 2.2:</strong> Reference — COD Advanced Warfare.</p>
+            </div>
+          </div>
+
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">Inventory &amp; Attachments</h4>
+            <p style="font-size: 0.88rem;">
+              The player can choose which camera attachment/add-on to use in the inventory.
+            </p>
+            <div class="diagram-container" style="margin: 0.75rem 0 0 0; padding: 0.75rem;">
+              <img src="assets/Week2/Screenshot 2026-11-26 143259.png" alt="Apex Legends attachment inventory reference"
+                style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+              <p class="diagram-caption"><strong>Figure 2.3:</strong> Reference — Apex Legends.</p>
+            </div>
+          </div>
+
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">Event Area Activation</h4>
+            <p style="font-size: 0.88rem;">
+              The player activates the game event by walking to the event area.
+            </p>
+            <div class="diagram-container" style="margin: 0.75rem 0 0 0; padding: 0.75rem;">
+              <img src="assets/Week2/Screenshot 2026-11-26 143306.png" alt="Unity Tutorial event trigger area reference"
+                style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+              <p class="diagram-caption"><strong>Figure 2.4:</strong> Reference — Unity Tutorial.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Control Scheme (Keyboard + Mouse)</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Input</th>
+                <th>Action</th>
+                <th>Input</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Movement</strong></td>
+                <td><code>WASD</code>, <code>Space</code></td>
+                <td><strong>Pause</strong></td>
+                <td><code>ESC</code></td>
+              </tr>
+              <tr>
+                <td><strong>Crouch</strong></td>
+                <td><code>C</code></td>
+                <td><strong>Inventory</strong></td>
+                <td><code>Tab</code> / <code>Hotkey 1</code></td>
+              </tr>
+              <tr>
+                <td><strong>Prone</strong></td>
+                <td><code>X</code></td>
+                <td><strong>Toggle First Person / Third Person</strong></td>
+                <td><code>I</code></td>
+              </tr>
+              <tr>
+                <td><strong>Camera Movement</strong></td>
+                <td><code>Mouse</code></td>
+                <td><strong>Rotate Picture</strong></td>
+                <td><code>Mouse 2</code></td>
+              </tr>
+              <tr>
+                <td><strong>Camera (Take Photo)</strong></td>
+                <td><code>Mouse 1</code></td>
+                <td><strong>Flip Picture Frame</strong></td>
+                <td><code>Space</code></td>
+              </tr>
+              <tr>
+                <td><strong>Camera (Viewfinder Zoom)</strong></td>
+                <td><code>Mouse 2</code></td>
+                <td><strong>Close Picture Frame</strong></td>
+                <td><code>Mouse 1</code></td>
+              </tr>
+              <tr>
+                <td><strong>Interaction Controls</strong></td>
+                <td><code>F</code></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Player Action &amp; Game Response</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Player Action</th>
+                <th>Game Response</th>
+                <th>Player Feedback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Player picks up a camera attachment</td>
+                <td>Camera attachment is unlocked</td>
+                <td>Spinning animation of the item will be on screen and a chime will be played</td>
+              </tr>
+              <tr>
+                <td>Players talk to a task giving NPC</td>
+                <td>A new task is added</td>
+                <td>A chime will be played and the quest displayed on the task bar</td>
+              </tr>
+              <tr>
+                <td>Player clicks the shutter button</td>
+                <td>Photo is taken and saved into the camera roll according to the exposure setting and the framing</td>
+                <td>Shutter sound will be played and the photo counter will be updated with the preview shown</td>
+              </tr>
+              <tr>
+                <td>Player talks to all the NPC</td>
+                <td>Achievement unlock: Extrovert</td>
+                <td>Visual effect and extra in-game points/currency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Content 3: Game UI, Feedback & Audio-Visual Design -->
+      <section class="card" id="ui-feedback-av">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 class="card-title">2.3 Game UI, Feedback &amp; Audio-Visual Design</h2>
+          </div>
+          <span class="academic-pill">Content 3</span>
+        </div>
+
+        <h3>A. User Interface (UI) Design</h3>
+        <div class="grid-3">
+          <div class="diagram-container" style="margin: 0;">
+            <img src="assets/Week2/Screenshot 2026-11-26 143316.png" alt="1. Main Menu UI Wireframe"
+              style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+            <p class="diagram-caption"><strong>1. Main Menu</strong></p>
+          </div>
+
+          <div class="diagram-container" style="margin: 0;">
+            <img src="assets/Week2/Screenshot 2026-11-26 143322.png" alt="2. Gameplay Screen UI Wireframe"
+              style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+            <p class="diagram-caption"><strong>2. Gameplay Screen</strong></p>
+          </div>
+
+          <div class="diagram-container" style="margin: 0;">
+            <img src="assets/Week2/Screenshot 2026-11-26 143329.png" alt="3. Win/Lose or Result Screen UI Wireframe"
+              style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+            <p class="diagram-caption"><strong>3. Win/Lose or Result Screen</strong></p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">B. Game Feedback</h3>
+        <div class="grid-2">
+          <!-- Positive Reinforcement -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Positive Reinforcement</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Party popper particle system congratulating the player for a good score.</li>
+              <li>"Applaud" sound effect played when getting a high score or scoring above a threshold.</li>
+              <li>Receiving EXP for leveling up and in-game currency/points to upgrade camera gear.</li>
+              <li>Camera snapping sound effect, photo counter update, and preview when a photo is taken successfully.</li>
+            </ul>
+          </div>
+
+          <!-- Negative Reinforcement -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-teal); margin-top: 0;">Negative Reinforcement</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Holding breath (key press) removes camera shake while stabilizing a shot.</li>
+              <li>Adjusting ISO, Aperture, and Shutter Speed removes over/under-exposure and motion blur.</li>
+              <li>Lit-up objective areas and NPC dialogue cues guide the player to remove uncertainty on where to shoot.</li>
+            </ul>
+          </div>
+
+          <!-- Positive Punishment -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-rose); margin-top: 0;">Positive Punishment</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Failing to hit the passing grade set by the level triggers a fail/loss result requiring a retry.</li>
+              <li>Incorrect exposure or framing produces a poorly exposed/blurred shot and a low score.</li>
+            </ul>
+          </div>
+
+          <!-- Negative Punishment -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Negative Punishment</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Depleting the breath-hold stamina bar removes camera stabilization.</li>
+              <li>Taking extra shots consumes internal memory capacity (<code>1/6400</code>).</li>
+            </ul>
+          </div>
+
+          <!-- Primary Reinforcers -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Primary Reinforcers</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Sensory audio-visual feedback: camera shutter snap sound, item/quest chimes, "applaud" sound effect, and party popper particles.</li>
+              <li>Visual satisfaction of capturing clear, well-framed scenic photographs.</li>
+            </ul>
+          </div>
+
+          <!-- Secondary Reinforcers -->
+          <div
+            style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="color: var(--accent-gold-light); margin-top: 0;">Secondary Reinforcers</h4>
+            <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+              <li>Numerical photo score, EXP for leveling up, and in-game currency/points to upgrade camera equipment.</li>
+              <li>Achievement unlocks (e.g., <em>Extrovert</em> for talking to all NPCs) and quest completion on the task bar.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- C. Initial Audio-Visual Design Ideas -->
+        <div
+          style="margin-top: 1.5rem; background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <h3 style="margin-top: 0;">C. Initial Audio-Visual Design Ideas</h3>
+          <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--text-secondary);">
+            <li>A shutter sound will be played every time a shot is taken to confirm a photograph has been captured.
+            </li>
+            <li>Snapped photographs/polaroids can be rotated to allow different viewing perspectives such as a
+              horizontal picture frame.</li>
+            <li>Cinematic zoom / focus while in dialogue mode: a subtle focused zoom with cinematic black bars takes
+              place when the player engages in dialogue.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <a href="week1.html" class="btn btn-secondary btn-sm">← Week 1: The Birth of Our Game</a>
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -84,6 +437,7 @@
         <ul>
           <li><a href="index.html">Overview &amp; Concept</a></li>
           <li><a href="week1.html">Week 1: The Birth of Our Game</a></li>
+          <li><a href="week2.html">Week 2: How Our Game Works</a></li>
         </ul>
       </div>
 
@@ -104,4 +458,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

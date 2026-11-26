@@ -1,0 +1,111 @@
+Practical 2
+Content 1: Game Rules & Gameplay Mechanics
+Game Setting, Player Role & Objectives
+Game Setting: Several scenic locations
+
+(Amanohashidate, Kyoto)
+
+Asset Dump:
+https://yumeforge.itch.io/japanese-rural-village 
+https://rg-poly.itch.io/stylized-asia-enviroment-megapack-unity-urp 
+https://www.cgtrader.com/search?keywords=tokyo-city&licenses[]=exclude_ai_generated&licenses[]=exclude_3d_print&price[from]=0&price[to]=0 
+https://www.cgtrader.com/search?keywords=japan&licenses%5B%5D=exclude_ai_generated&licenses%5B%5D=exclude_3d_print&price%5Bfrom%5D=0&price%5Bto%5D=0 
+
+Player Character: A beginner in photography
+Character Roles: NPC gives out photo request
+Player Objectives: Capture requests of requested objects.
+Game Rules
+The player cannot run out of bounds
+The player can only take pictures in designated areas
+The player will be rewarded with points/in-game currency to upgrade their camera equipment (optional)
+The player will lose/fail if they fail to hit a passing grade set by the level
+The player will be able to retry any level
+
+
+Gameplay Mechanics
+Movement: Run, Jump, Crouch, Prone, Walk
+Interaction: 
+The player will talk to the NPC to receive a quest.
+The player will find the designated photo area to take the requested photo.
+The photo will be graded in terms of simple composition and exposure set by the exposure triangle (ISO, Shutter Speed, Aperture).
+Composition will be determined by how many objects are captured in frame, how far away the center of the frame is to the “ideal” framing for the specific composition. It teaches the player the exposure triangle and basic composition.
+The player will be required to press a key to hold their breath to prevent shaking. A stamina bar will dictate how long players are able to hold their breath to stabilize their camera for.
+
+Progression: Getting a passing grade for completing quest
+Puzzle: 
+The player will need to adjust the camera settings like:
+ISO, Aperture and Shutter Speed to get a better exposed shot for a higher score.
+The player will need to figure out which lens/lighting equipment to use to get a better picture.
+
+Content 2: Player Interaction & Control Scheme
+Player Interaction
+The player can interact with items/objects by pressing the [interact] key.
+The player can interact with NPCs by pressing the [interact] key.
+The player can use/collect items by pressing the [interact] key.
+
+(COD Advanced Warfare)
+The player can choose which camera attachment/add-on to use in the inventory.
+
+(Apex Legends)
+The player activates the game event by walking to the event area.
+
+(Unity Tutorial)
+
+
+Control Scheme
+Keyboard + Mouse:
+Movement: WASD, Space
+Crouch: C
+Prone: X
+Camera Movement: Mouse 
+Camera (Take Photo): Mouse 1
+Camera (Viewfinder Zoom): Mouse 2
+Interaction controls: F
+Pause: ESC
+Inventory: Tab / Hotkey 1
+Toggle First Person/Thrid Person: I
+Rotate Picture: Mouse 2
+Flip Picture Frame: Space
+Close Picture Frame: Mouse 1
+
+Player Action & Game Response
+
+Player Action
+Game Response
+Player Feedback
+Player picks up a camera attachment
+Camera attachment is unlocked
+Spinning animation of the item will be on screen and the a chime will be played
+Players talk to a task giving NPC
+A new task is added
+A chime will be played and the quest displayed on the task bar
+Player clicks the shutter button
+Photo is taken and saved into the camera roll according to the exposure setting and the framing
+Shutter sound will be played and the photo counter will be updated with the preview shown
+Player talks to all the NPC
+Achievement unlock: Extrovert
+Visual effect and extra in-game points/currency
+
+
+
+Content 3: Game UI, Feedback &amp; Audio-Visual Design
+User Interface (UI) Design
+1. Main Menu
+
+2. Gameplay Screen
+
+
+3. Win/Lose or Result Screen
+
+
+B. Game Feedback
+A particle system will be used to add party poppers to congratulate the player for good score.
+An “applaud” sound effect will be played if a player gets a highscore/above a score threshold
+The player will receive EXP for leveling up and in-game currency to upgrade their gear. 
+Visual cues such as lit up areas with light to indicate to players that that is a main objective spot to take photos and complete challenges.
+Sound effects such as the camera snapping sound effect to indicate to players that they have taken a photo successfully.
+Text indicators such as NPC dialogues to softly guide players to their objective through narrative.
+C. Initial Audio-Visual Design Ideas
+A shutter sound will be played everytime it takes a shot to confirm a photograph has been taken by a player.
+Snapped photographs/polaroids can be rotated to allow different viewing perspectives such as a horizontal picture frame.
+Cinematic zoom / focus while in dialogue mode. A subtle focused zoom with cinematic black bars takes place when the players engages in a dialogue with the players. 
